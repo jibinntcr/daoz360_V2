@@ -242,13 +242,13 @@ export default function CustomerDashboardPage() {
     );
   }
 
-  const isDark = theme === 'dark';
-  const bgMain = isDark ? '#09090B' : '#F8FAFC';
-  const bgCard = isDark ? '#18181B' : '#FFFFFF';
-  const bgSidebar = isDark ? '#121215' : '#FFFFFF';
-  const borderCol = isDark ? '#27272A' : '#E2E8F0';
-  const textMain = isDark ? '#F4F4F5' : '#0F172A';
-  const textMuted = isDark ? '#A1A1AA' : '#64748B';
+  const isDark = false;
+  const bgMain = '#FFF9F5';
+  const bgCard = '#FFFFFF';
+  const bgSidebar = '#FFFFFF';
+  const borderCol = '#F2E5DC';
+  const textMain = '#18181B';
+  const textMuted = '#52525B';
 
   const parsedNaturalTime = parseNaturalLanguageSchedule(naturalScheduleText);
   const currentDraftObj = (data.drafts || []).find((d: any) => d._id === selectedDraftId);

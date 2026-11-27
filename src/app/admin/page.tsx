@@ -29,7 +29,7 @@ export default function PlatformAdminConsole() {
     try {
       const res = await fetch('/api/admin');
       if (res.status === 401 || res.status === 403) {
-        setError('Platform Administrator authentication (with MFA) is required to access /admin.');
+        setError('Platform Administrator authentication is required to access /admin.');
         setLoading(false);
         return;
       }
@@ -74,12 +74,24 @@ export default function PlatformAdminConsole() {
     }
   }
 
+  // DAOZ360 Warm Ceramic & Sculptural Orange Palette
+  const bgPage = '#FFF9F5';
+  const bgSidebar = '#FFFFFF';
+  const bgCard = '#FFFFFF';
+  const bgSoft = '#FFF4EC';
+  const borderCol = '#F2E5DC';
+  const textMain = '#18181B';
+  const textSub = '#52525B';
+  const textMuted = '#71717A';
+  const brandOrange = '#FF5A00';
+  const brandDeep = '#B93D00';
+
   if (loading && !data) {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#09090B', color: '#FAFAFA' }}>
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: bgPage, color: textMain }}>
         <div style={{ textAlign: 'center' }}>
-          <div style={{ fontSize: '18px', fontWeight: 700, marginBottom: '8px' }}>Loading DAOZ360 Platform Admin Console...</div>
-          <div style={{ fontSize: '13px', color: '#A1A1AA' }}>Verifying administrator session and MFA state</div>
+          <div style={{ fontSize: '18px', fontWeight: 800, marginBottom: '8px', color: textMain }}>Loading DAOZ360 Platform Admin Console...</div>
+          <div style={{ fontSize: '13px', color: textSub }}>Verifying administrator session and telemetry</div>
         </div>
       </div>
     );
@@ -87,16 +99,16 @@ export default function PlatformAdminConsole() {
 
   if (error) {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#09090B', color: '#FAFAFA', padding: '24px' }}>
-        <div style={{ maxWidth: '480px', width: '100%', background: '#18181B', border: '1px solid #27272A', borderRadius: '16px', padding: '32px', textAlign: 'center' }}>
-          <div style={{ display: 'inline-block', padding: '6px 12px', borderRadius: '999px', background: '#451A03', color: '#FDBA74', fontSize: '12px', fontWeight: 700, marginBottom: '14px' }}>
-            Restricted Platform Console
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: bgPage, color: textMain, padding: '24px' }}>
+        <div className="card-base" style={{ maxWidth: '480px', width: '100%', background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '20px', padding: '34px', textAlign: 'center', boxShadow: '0 14px 36px rgba(255, 90, 0, 0.08)' }}>
+          <div style={{ display: 'inline-block', padding: '6px 14px', borderRadius: '999px', background: bgSoft, color: brandDeep, fontSize: '12px', fontWeight: 700, marginBottom: '14px' }}>
+            Platform Operations Console
           </div>
-          <h1 style={{ fontSize: '22px', fontWeight: 800, margin: '0 0 10px' }}>Administrator Sign-In Required</h1>
-          <p style={{ fontSize: '14px', color: '#A1A1AA', marginBottom: '24px' }}>{error}</p>
+          <h1 style={{ fontSize: '24px', fontWeight: 800, margin: '0 0 10px', color: textMain }}>Administrator Sign-In Required</h1>
+          <p style={{ fontSize: '14px', color: textSub, marginBottom: '24px' }}>{error}</p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
             <Link href="/login" className="btn-primary" style={{ textDecoration: 'none' }}>
-              <span>Sign In with Admin MFA</span>
+              <span>1-Click Admin Sign In</span>
             </Link>
             <Link href="/dashboard" className="btn-secondary" style={{ textDecoration: 'none' }}>
               <span>Customer Dashboard</span>
@@ -120,21 +132,21 @@ export default function PlatformAdminConsole() {
   });
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', background: '#09090B', color: '#F4F4F5', fontFamily: 'Inter, sans-serif' }}>
-      {/* Sidebar Navigation */}
-      <aside style={{ width: '265px', background: '#121215', borderRight: '1px solid #27272A', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '20px 14px', flexShrink: 0 }}>
+    <div style={{ minHeight: '100vh', display: 'flex', background: bgPage, color: textMain, fontFamily: 'Inter, sans-serif' }}>
+      {/* Warm White Ceramic Sidebar Navigation */}
+      <aside style={{ width: '272px', background: bgSidebar, borderRight: `1px solid ${borderCol}`, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '22px 16px', flexShrink: 0, boxShadow: '4px 0 24px rgba(185, 61, 0, 0.03)' }}>
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 10px 20px', borderBottom: '1px solid #27272A', marginBottom: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 10px 20px', borderBottom: `1px solid ${borderCol}`, marginBottom: '18px' }}>
             <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/logo-daoz360-transparent.png" alt="DAOZ360" width={135} height={27} />
+              <img src="/assets/logo-daoz360-transparent.png" alt="DAOZ360" width={140} height={28} />
             </Link>
-            <span style={{ fontSize: '10px', fontWeight: 800, padding: '2px 7px', borderRadius: '6px', background: '#FF5A00', color: '#FFFFFF', textTransform: 'uppercase' }}>
+            <span style={{ fontSize: '10px', fontWeight: 800, padding: '3px 9px', borderRadius: '999px', background: bgSoft, color: brandDeep, border: '1px solid #FFD8BE', textTransform: 'uppercase' }}>
               Admin
             </span>
           </div>
 
-          <nav aria-label="Platform Admin Navigation" style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+          <nav aria-label="Platform Admin Navigation" style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
             {[
               { id: 'overview', label: 'Overview & Telemetry' },
               { id: 'users_workspaces', label: 'Users & Workspaces' },
@@ -144,41 +156,49 @@ export default function PlatformAdminConsole() {
               { id: 'inquiries', label: `Leads & Inquiries (${data.inquiries?.length || 0})` },
               { id: 'audit_log', label: 'Audit Trail' },
               { id: 'settings', label: 'Platform Settings' },
-            ].map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setActiveTab(item.id as AdminTab)}
-                style={{
-                  textAlign: 'left',
-                  padding: '10px 12px',
-                  borderRadius: '10px',
-                  border: 'none',
-                  background: activeTab === item.id ? '#27272A' : 'transparent',
-                  color: activeTab === item.id ? '#FFFFFF' : '#A1A1AA',
-                  fontWeight: activeTab === item.id ? 700 : 500,
-                  fontSize: '13px',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                }}
-              >
-                <span>{item.label}</span>
-                {activeTab === item.id && <span style={{ color: '#FF5A00' }}>&bull;</span>}
-              </button>
-            ))}
+            ].map((item) => {
+              const isActive = activeTab === item.id;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => setActiveTab(item.id as AdminTab)}
+                  style={{
+                    textAlign: 'left',
+                    padding: '11px 14px',
+                    borderRadius: '12px',
+                    border: isActive ? '1px solid #FFD8BE' : '1px solid transparent',
+                    background: isActive ? bgSoft : 'transparent',
+                    color: isActive ? brandDeep : textSub,
+                    fontWeight: isActive ? 700 : 500,
+                    fontSize: '13px',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    transition: 'all 150ms ease',
+                  }}
+                >
+                  <span>{item.label}</span>
+                  {isActive && <span style={{ color: brandOrange, fontSize: '16px' }}>&bull;</span>}
+                </button>
+              );
+            })}
           </nav>
         </div>
 
-        <div style={{ borderTop: '1px solid #27272A', paddingTop: '14px', fontSize: '12px' }}>
-          <div style={{ fontWeight: 700, color: '#FFFFFF' }}>{data.adminUser.name}</div>
-          <div style={{ color: '#A1A1AA', marginBottom: '10px' }}>
-            {data.adminUser.email} &bull; <span style={{ color: '#FDBA74' }}>{data.adminUser.platformRole}</span>
+        <div style={{ borderTop: `1px solid ${borderCol}`, paddingTop: '16px', fontSize: '12px' }}>
+          <div style={{ fontWeight: 700, color: textMain }}>{data.adminUser.name}</div>
+          <div style={{ color: textMuted, marginBottom: '12px' }}>
+            {data.adminUser.email} &bull; <span style={{ color: brandDeep, fontWeight: 600 }}>{data.adminUser.platformRole}</span>
           </div>
           <div style={{ display: 'flex', gap: '8px' }}>
-            <Link href="/dashboard" style={{ flex: 1, textAlign: 'center', padding: '7px 10px', borderRadius: '8px', background: '#27272A', color: '#E4E4E7', textDecoration: 'none', fontWeight: 600 }}>
-              Customer UI
+            <Link
+              href="/dashboard"
+              className="btn-secondary"
+              style={{ flex: 1, textAlign: 'center', padding: '8px 10px', fontSize: '12px', textDecoration: 'none', justifyContent: 'center' }}
+            >
+              <span>Customer UI</span>
             </Link>
             <button
               type="button"
@@ -190,7 +210,7 @@ export default function PlatformAdminConsole() {
                 });
                 router.push('/login');
               }}
-              style={{ padding: '7px 10px', borderRadius: '8px', border: '1px solid #3F3F46', background: 'transparent', color: '#F87171', cursor: 'pointer', fontWeight: 600 }}
+              style={{ padding: '8px 12px', borderRadius: '999px', border: `1px solid ${borderCol}`, background: '#FFFFFF', color: '#DC2626', cursor: 'pointer', fontWeight: 600, fontSize: '12px' }}
             >
               Sign Out
             </button>
@@ -198,14 +218,18 @@ export default function PlatformAdminConsole() {
         </div>
       </aside>
 
-      {/* Main Content */}
-      <div style={{ flex: 1, padding: '28px 36px', overflowY: 'auto' }}>
-        <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '16px' }}>
+      {/* Main Content Area */}
+      <div style={{ flex: 1, padding: '32px 40px', overflowY: 'auto' }}>
+        <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '26px', flexWrap: 'wrap', gap: '16px', background: bgCard, padding: '20px 24px', borderRadius: '18px', border: `1px solid ${borderCol}`, boxShadow: '0 8px 24px rgba(24, 24, 27, 0.03)' }}>
           <div>
-            <h1 style={{ fontSize: '24px', fontWeight: 800, margin: '0 0 4px', color: '#FFFFFF' }}>
-              DAOZ360 Platform Operations Console
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: brandDeep, marginBottom: '4px' }}>
+              <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: brandOrange, display: 'inline-block' }}></span>
+              <span>DAOZ360 Platform Administration</span>
+            </div>
+            <h1 style={{ fontSize: '24px', fontWeight: 800, margin: '0 0 4px', color: textMain, fontFamily: 'Manrope, Inter, sans-serif' }}>
+              Platform Operations &amp; Provider Governance
             </h1>
-            <p style={{ fontSize: '13px', color: '#A1A1AA', margin: 0 }}>
+            <p style={{ fontSize: '13px', color: textSub, margin: 0 }}>
               Zero-trust tenant isolation active: customer OAuth grants and private draft contents are excluded from global inspection.
             </p>
           </div>
@@ -213,24 +237,26 @@ export default function PlatformAdminConsole() {
             <button
               type="button"
               onClick={() => runAdminAction({ action: 'run_worker_cycle' }, 'Executed worker queue cycle')}
-              style={{ padding: '9px 14px', borderRadius: '9px', border: '1px solid #3F3F46', background: '#18181B', color: '#FAFAFA', fontSize: '13px', fontWeight: 600, cursor: 'pointer' }}
+              className="btn-secondary"
+              style={{ padding: '10px 16px', fontSize: '13px' }}
             >
-              Run Worker Dispatch Cycle
+              <span>Run Worker Dispatch Cycle</span>
             </button>
             <button
               type="button"
               onClick={fetchAdminData}
-              style={{ padding: '9px 14px', borderRadius: '9px', border: 'none', background: '#FF5A00', color: '#FFFFFF', fontSize: '13px', fontWeight: 700, cursor: 'pointer' }}
+              className="btn-primary"
+              style={{ padding: '10px 18px', fontSize: '13px' }}
             >
-              Refresh Telemetry
+              <span>Refresh Telemetry</span>
             </button>
           </div>
         </header>
 
         {statusToast && (
-          <div role="status" style={{ padding: '12px 16px', background: '#18181B', border: '1px solid #FF5A00', borderRadius: '10px', color: '#FDBA74', fontSize: '13px', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div role="status" style={{ padding: '14px 18px', background: bgSoft, border: `1px solid ${brandOrange}`, borderRadius: '12px', color: brandDeep, fontSize: '13px', fontWeight: 600, marginBottom: '22px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span>{statusToast}</span>
-            <button type="button" onClick={() => setStatusToast('')} style={{ background: 'transparent', border: 'none', color: '#A1A1AA', cursor: 'pointer' }}>&times;</button>
+            <button type="button" onClick={() => setStatusToast('')} style={{ background: 'transparent', border: 'none', color: brandDeep, cursor: 'pointer', fontSize: '18px' }}>&times;</button>
           </div>
         )}
 
@@ -247,31 +273,31 @@ export default function PlatformAdminConsole() {
                 { label: 'Worker Queue Lag', value: ov.queueLagCount, sub: 'Due jobs awaiting claim' },
                 { label: 'Analytics Freshness', value: ov.analyticsSnapshotsCount, sub: ov.latestAnalyticsSyncAt ? `Last sync ${new Date(ov.latestAnalyticsSyncAt).toLocaleTimeString()}` : 'No snapshots' },
               ].map((stat) => (
-                <div key={stat.label} style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '18px' }}>
-                  <div style={{ fontSize: '12px', color: '#A1A1AA', fontWeight: 600, marginBottom: '6px' }}>{stat.label}</div>
-                  <div style={{ fontSize: '26px', fontWeight: 800, color: '#FFFFFF', marginBottom: '4px' }}>{stat.value}</div>
-                  <div style={{ fontSize: '12px', color: '#71717A' }}>{stat.sub}</div>
+                <div key={stat.label} className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '16px', padding: '20px', boxShadow: '0 6px 20px rgba(24, 24, 27, 0.03)' }}>
+                  <div style={{ fontSize: '12px', color: textSub, fontWeight: 600, marginBottom: '6px' }}>{stat.label}</div>
+                  <div style={{ fontSize: '28px', fontWeight: 800, color: textMain, marginBottom: '4px', fontFamily: 'Manrope, Inter, sans-serif' }}>{stat.value}</div>
+                  <div style={{ fontSize: '12px', color: textMuted }}>{stat.sub}</div>
                 </div>
               ))}
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-              <div style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '20px' }}>
-                <h2 style={{ fontSize: '16px', fontWeight: 700, margin: '0 0 14px' }}>Provider Health Matrix</h2>
+              <div className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '22px' }}>
+                <h2 style={{ fontSize: '17px', fontWeight: 800, margin: '0 0 14px', color: textMain }}>Provider Health Matrix</h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {data.providers.map((p: any) => (
-                    <div key={p._id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 12px', background: '#121215', borderRadius: '10px', border: '1px solid #27272A' }}>
+                    <div key={p._id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 14px', background: bgPage, borderRadius: '12px', border: `1px solid ${borderCol}` }}>
                       <div>
-                        <div style={{ fontSize: '13px', fontWeight: 700, color: '#FFFFFF' }}>{p.displayName}</div>
-                        <div style={{ fontSize: '11px', color: '#A1A1AA' }}>API {p.apiVersion} &bull; {p.accessTier}</div>
+                        <div style={{ fontSize: '13px', fontWeight: 700, color: textMain }}>{p.displayName}</div>
+                        <div style={{ fontSize: '11px', color: textSub }}>API {p.apiVersion} &bull; {p.accessTier}</div>
                       </div>
                       <span style={{
                         fontSize: '11px',
                         fontWeight: 700,
-                        padding: '3px 9px',
+                        padding: '4px 10px',
                         borderRadius: '999px',
-                        background: p.lastHealthStatus === 'connected' ? '#052E16' : '#451A03',
-                        color: p.lastHealthStatus === 'connected' ? '#4ADE80' : '#FDBA74',
+                        background: p.lastHealthStatus === 'connected' ? '#DCFCE7' : bgSoft,
+                        color: p.lastHealthStatus === 'connected' ? '#166534' : brandDeep,
                       }}>
                         {p.lastHealthStatus}
                       </span>
@@ -280,16 +306,16 @@ export default function PlatformAdminConsole() {
                 </div>
               </div>
 
-              <div style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '20px' }}>
-                <h2 style={{ fontSize: '16px', fontWeight: 700, margin: '0 0 14px' }}>Recent Operational Audit Events</h2>
+              <div className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '22px' }}>
+                <h2 style={{ fontSize: '17px', fontWeight: 800, margin: '0 0 14px', color: textMain }}>Recent Operational Audit Events</h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {(data.auditEvents || []).slice(0, 7).map((ev: any) => (
-                    <div key={ev._id} style={{ padding: '10px 12px', background: '#121215', borderRadius: '10px', border: '1px solid #27272A', fontSize: '12px' }}>
+                    <div key={ev._id} style={{ padding: '12px 14px', background: bgPage, borderRadius: '12px', border: `1px solid ${borderCol}`, fontSize: '12px' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                        <strong style={{ color: '#FDBA74' }}>{ev.action}</strong>
-                        <span style={{ color: '#71717A' }}>{new Date(ev.createdAt).toLocaleString()}</span>
+                        <strong style={{ color: brandDeep }}>{ev.action}</strong>
+                        <span style={{ color: textMuted }}>{new Date(ev.createdAt).toLocaleString()}</span>
                       </div>
-                      <div style={{ color: '#A1A1AA' }}>
+                      <div style={{ color: textSub }}>
                         Actor: {ev.actorEmail || ev.actorUserId || 'system'} &bull; Target: {ev.targetType}:{ev.targetId}
                       </div>
                     </div>
@@ -303,26 +329,26 @@ export default function PlatformAdminConsole() {
         {/* 2. USERS & WORKSPACES TAB */}
         {activeTab === 'users_workspaces' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            <div style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '20px' }}>
-              <h2 style={{ fontSize: '17px', fontWeight: 700, margin: '0 0 14px' }}>Workspaces & Plan Entitlements</h2>
+            <div className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '24px' }}>
+              <h2 style={{ fontSize: '18px', fontWeight: 800, margin: '0 0 14px', color: textMain }}>Workspaces &amp; Plan Entitlements</h2>
               <div style={{ overflowX: 'auto' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                   <thead>
-                    <tr style={{ borderBottom: '1px solid #27272A', textAlign: 'left', color: '#A1A1AA' }}>
-                      <th style={{ padding: '10px' }}>Workspace</th>
-                      <th style={{ padding: '10px' }}>Plan Tier</th>
-                      <th style={{ padding: '10px' }}>Entitlements (Accounts / Users / Deliveries)</th>
-                      <th style={{ padding: '10px' }}>Monthly Usage</th>
-                      <th style={{ padding: '10px' }}>Status</th>
-                      <th style={{ padding: '10px' }}>Actions</th>
+                    <tr style={{ borderBottom: `1px solid ${borderCol}`, textAlign: 'left', color: textSub }}>
+                      <th style={{ padding: '12px 10px' }}>Workspace</th>
+                      <th style={{ padding: '12px 10px' }}>Plan Tier</th>
+                      <th style={{ padding: '12px 10px' }}>Entitlements (Accounts / Users / Deliveries)</th>
+                      <th style={{ padding: '12px 10px' }}>Monthly Usage</th>
+                      <th style={{ padding: '12px 10px' }}>Status</th>
+                      <th style={{ padding: '12px 10px' }}>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {data.workspaces.map((ws: any) => (
-                      <tr key={ws._id} style={{ borderBottom: '1px solid #27272A' }}>
+                      <tr key={ws._id} style={{ borderBottom: `1px solid ${borderCol}` }}>
                         <td style={{ padding: '12px 10px' }}>
-                          <div style={{ fontWeight: 700, color: '#FFFFFF' }}>{ws.name}</div>
-                          <div style={{ fontSize: '11px', color: '#71717A' }}>{ws._id} &bull; /{ws.slug}</div>
+                          <div style={{ fontWeight: 700, color: textMain }}>{ws.name}</div>
+                          <div style={{ fontSize: '11px', color: textMuted }}>{ws._id} &bull; /{ws.slug}</div>
                         </td>
                         <td style={{ padding: '12px 10px' }}>
                           <select
@@ -333,14 +359,15 @@ export default function PlatformAdminConsole() {
                                 `Updated workspace ${ws.name} to ${e.target.value}`
                               )
                             }
-                            style={{ background: '#121215', color: '#FFFFFF', border: '1px solid #3F3F46', borderRadius: '6px', padding: '5px 8px' }}
+                            className="form-input"
+                            style={{ padding: '6px 10px', fontSize: '12px' }}
                           >
                             <option value="starter">Starter (₹999 / $19)</option>
                             <option value="growth">Growth (₹2,499 / $49)</option>
                             <option value="agency">Agency (₹5,999 / $99)</option>
                           </select>
                         </td>
-                        <td style={{ padding: '12px 10px', color: '#D4D4D8' }}>
+                        <td style={{ padding: '12px 10px', color: textSub }}>
                           {ws.limits.accounts} accounts &bull; {ws.limits.users} seats &bull; {ws.limits.deliveriesPerMonth} deliveries/mo
                         </td>
                         <td style={{ padding: '12px 10px' }}>
@@ -348,12 +375,12 @@ export default function PlatformAdminConsole() {
                         </td>
                         <td style={{ padding: '12px 10px' }}>
                           <span style={{
-                            padding: '3px 8px',
+                            padding: '4px 10px',
                             borderRadius: '999px',
                             fontSize: '11px',
                             fontWeight: 700,
-                            background: ws.status === 'active' ? '#052E16' : '#450A0A',
-                            color: ws.status === 'active' ? '#4ADE80' : '#F87171',
+                            background: ws.status === 'active' ? '#DCFCE7' : '#FEE2E2',
+                            color: ws.status === 'active' ? '#166534' : '#991B1B',
                           }}>
                             {ws.status}
                           </span>
@@ -371,9 +398,10 @@ export default function PlatformAdminConsole() {
                                 `Workspace ${ws.name} status updated`
                               )
                             }
-                            style={{ padding: '5px 10px', borderRadius: '6px', border: '1px solid #3F3F46', background: 'transparent', color: '#E4E4E7', cursor: 'pointer', fontSize: '12px' }}
+                            className="btn-secondary"
+                            style={{ padding: '6px 12px', fontSize: '12px' }}
                           >
-                            {ws.status === 'active' ? 'Suspend' : 'Reactivate'}
+                            <span>{ws.status === 'active' ? 'Suspend' : 'Reactivate'}</span>
                           </button>
                         </td>
                       </tr>
@@ -383,31 +411,31 @@ export default function PlatformAdminConsole() {
               </div>
             </div>
 
-            <div style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '20px' }}>
-              <h2 style={{ fontSize: '17px', fontWeight: 700, margin: '0 0 14px' }}>Platform Users</h2>
+            <div className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '24px' }}>
+              <h2 style={{ fontSize: '18px', fontWeight: 800, margin: '0 0 14px', color: textMain }}>Platform Users</h2>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                 <thead>
-                  <tr style={{ borderBottom: '1px solid #27272A', textAlign: 'left', color: '#A1A1AA' }}>
-                    <th style={{ padding: '10px' }}>Name & Email</th>
-                    <th style={{ padding: '10px' }}>Platform Role</th>
-                    <th style={{ padding: '10px' }}>MFA</th>
-                    <th style={{ padding: '10px' }}>Status</th>
-                    <th style={{ padding: '10px' }}>Action</th>
+                  <tr style={{ borderBottom: `1px solid ${borderCol}`, textAlign: 'left', color: textSub }}>
+                    <th style={{ padding: '12px 10px' }}>Name &amp; Email</th>
+                    <th style={{ padding: '12px 10px' }}>Platform Role</th>
+                    <th style={{ padding: '12px 10px' }}>MFA</th>
+                    <th style={{ padding: '12px 10px' }}>Status</th>
+                    <th style={{ padding: '12px 10px' }}>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   {data.users.map((u: any) => (
-                    <tr key={u._id} style={{ borderBottom: '1px solid #27272A' }}>
-                      <td style={{ padding: '10px' }}>
-                        <div style={{ fontWeight: 700 }}>{u.name}</div>
-                        <div style={{ fontSize: '12px', color: '#A1A1AA' }}>{u.email}</div>
+                    <tr key={u._id} style={{ borderBottom: `1px solid ${borderCol}` }}>
+                      <td style={{ padding: '12px 10px' }}>
+                        <div style={{ fontWeight: 700, color: textMain }}>{u.name}</div>
+                        <div style={{ fontSize: '12px', color: textSub }}>{u.email}</div>
                       </td>
-                      <td style={{ padding: '10px' }}>
-                        <span style={{ padding: '3px 8px', borderRadius: '6px', background: '#27272A', fontSize: '12px' }}>{u.platformRole}</span>
+                      <td style={{ padding: '12px 10px' }}>
+                        <span style={{ padding: '4px 10px', borderRadius: '999px', background: bgSoft, color: brandDeep, fontWeight: 700, fontSize: '11px' }}>{u.platformRole}</span>
                       </td>
-                      <td style={{ padding: '10px' }}>{u.mfaEnabled ? 'Enabled (TOTP)' : 'Standard'}</td>
-                      <td style={{ padding: '10px' }}>{u.status}</td>
-                      <td style={{ padding: '10px' }}>
+                      <td style={{ padding: '12px 10px' }}>{u.mfaEnabled ? 'Configured' : 'Standard'}</td>
+                      <td style={{ padding: '12px 10px' }}>{u.status}</td>
+                      <td style={{ padding: '12px 10px' }}>
                         <button
                           type="button"
                           onClick={() =>
@@ -420,9 +448,10 @@ export default function PlatformAdminConsole() {
                               `Updated user ${u.email}`
                             )
                           }
-                          style={{ padding: '5px 10px', borderRadius: '6px', border: '1px solid #3F3F46', background: 'transparent', color: '#E4E4E7', cursor: 'pointer', fontSize: '12px' }}
+                          className="btn-secondary"
+                          style={{ padding: '6px 12px', fontSize: '12px' }}
                         >
-                          {u.status === 'active' ? 'Suspend User' : 'Restore User'}
+                          <span>{u.status === 'active' ? 'Suspend User' : 'Restore User'}</span>
                         </button>
                       </td>
                     </tr>
@@ -436,29 +465,29 @@ export default function PlatformAdminConsole() {
         {/* 3. PROVIDERS TAB */}
         {activeTab === 'providers' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div style={{ padding: '16px 20px', background: '#18181B', border: '1px solid #27272A', borderRadius: '14px' }}>
-              <h2 style={{ fontSize: '17px', fontWeight: 700, margin: '0 0 6px' }}>
-                Official Social Provider Configuration & Launch Checklist
+            <div className="card-base" style={{ padding: '20px 24px', background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px' }}>
+              <h2 style={{ fontSize: '18px', fontWeight: 800, margin: '0 0 6px', color: textMain }}>
+                Official Social Provider Configuration &amp; Launch Checklist
               </h2>
-              <p style={{ fontSize: '13px', color: '#A1A1AA', margin: 0 }}>
+              <p style={{ fontSize: '13px', color: textSub, margin: 0 }}>
                 Super Admins can verify required environment variables, copy exact callback URLs per environment, run live diagnostics, open step-by-step developer portal guides, and connect DAOZ360-owned test accounts in the isolated Admin workspace (`ws_daoz360_admin`).
               </p>
             </div>
 
             {data.providers.map((p: any) => (
-              <div key={p._id} style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '22px' }}>
+              <div key={p._id} className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '24px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '4px' }}>
-                      <h3 style={{ fontSize: '18px', fontWeight: 800, margin: 0, color: '#FFFFFF' }}>{p.displayName}</h3>
-                      <span style={{ fontSize: '11px', padding: '3px 9px', borderRadius: '999px', background: p.lastHealthStatus === 'connected' ? '#052E16' : '#451A03', color: p.lastHealthStatus === 'connected' ? '#4ADE80' : '#FDBA74', fontWeight: 700 }}>
+                      <h3 style={{ fontSize: '18px', fontWeight: 800, margin: 0, color: textMain }}>{p.displayName}</h3>
+                      <span style={{ fontSize: '11px', padding: '4px 10px', borderRadius: '999px', background: p.lastHealthStatus === 'connected' ? '#DCFCE7' : bgSoft, color: p.lastHealthStatus === 'connected' ? '#166534' : brandDeep, fontWeight: 700 }}>
                         {p.lastHealthStatus}
                       </span>
-                      <span style={{ fontSize: '11px', padding: '3px 9px', borderRadius: '999px', background: '#27272A', color: '#D4D4D8' }}>
+                      <span style={{ fontSize: '11px', padding: '4px 10px', borderRadius: '999px', background: '#F4F4F5', color: textSub, fontWeight: 600 }}>
                         Approval: {p.approvalStatus}
                       </span>
                     </div>
-                    <div style={{ fontSize: '12px', color: '#A1A1AA' }}>
+                    <div style={{ fontSize: '12px', color: textSub }}>
                       API Version: <code>{p.apiVersion}</code> &bull; Access Tier: {p.accessTier} &bull; Verified: {p.catalog?.verifiedDate}
                     </div>
                   </div>
@@ -472,18 +501,20 @@ export default function PlatformAdminConsole() {
                           `Diagnostics completed for ${p.displayName}`
                         )
                       }
-                      style={{ padding: '7px 12px', borderRadius: '8px', border: '1px solid #3F3F46', background: '#27272A', color: '#FFFFFF', fontSize: '12px', fontWeight: 600, cursor: 'pointer' }}
+                      className="btn-secondary"
+                      style={{ padding: '8px 14px', fontSize: '12px' }}
                     >
-                      Run Diagnostics
+                      <span>Run Diagnostics</span>
                     </button>
                     <button
                       type="button"
                       onClick={() =>
                         setSelectedGuideProvider(selectedGuideProvider === p.provider ? null : p.provider)
                       }
-                      style={{ padding: '7px 12px', borderRadius: '8px', border: '1px solid #3F3F46', background: 'transparent', color: '#FDBA74', fontSize: '12px', fontWeight: 600, cursor: 'pointer' }}
+                      className="btn-secondary"
+                      style={{ padding: '8px 14px', fontSize: '12px' }}
                     >
-                      {selectedGuideProvider === p.provider ? 'Hide Setup Guide' : 'Setup Instructions'}
+                      <span>{selectedGuideProvider === p.provider ? 'Hide Setup Guide' : 'Setup Instructions'}</span>
                     </button>
                     <button
                       type="button"
@@ -496,9 +527,10 @@ export default function PlatformAdminConsole() {
                           window.location.href = res.authorizationUrl;
                         }
                       }}
-                      style={{ padding: '7px 12px', borderRadius: '8px', border: 'none', background: '#FF5A00', color: '#FFFFFF', fontSize: '12px', fontWeight: 700, cursor: 'pointer' }}
+                      className="btn-primary"
+                      style={{ padding: '8px 16px', fontSize: '12px' }}
                     >
-                      Connect Admin Test Account
+                      <span>Connect Admin Test Account</span>
                     </button>
                   </div>
                 </div>
@@ -506,12 +538,12 @@ export default function PlatformAdminConsole() {
                 {/* Callback URLs per environment */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px', marginBottom: '16px' }}>
                   {(['development', 'staging', 'production'] as const).map((envKey) => (
-                    <div key={envKey} style={{ padding: '10px 12px', background: '#121215', borderRadius: '10px', border: '1px solid #27272A' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-                        <span style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: '#A1A1AA' }}>
+                    <div key={envKey} style={{ padding: '12px 14px', background: bgPage, borderRadius: '12px', border: `1px solid ${borderCol}` }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                        <span style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: textSub }}>
                           {envKey} Callback URL
                         </span>
-                        <label style={{ fontSize: '11px', display: 'flex', alignItems: 'center', gap: '4px', cursor: 'pointer' }}>
+                        <label style={{ fontSize: '11px', display: 'flex', alignItems: 'center', gap: '4px', cursor: 'pointer', fontWeight: 600 }}>
                           <input
                             type="checkbox"
                             checked={Boolean(p.environmentFlags?.[envKey])}
@@ -536,7 +568,7 @@ export default function PlatformAdminConsole() {
                           Enabled
                         </label>
                       </div>
-                      <code style={{ display: 'block', fontSize: '11px', color: '#FDBA74', wordBreak: 'break-all' }}>
+                      <code style={{ display: 'block', fontSize: '11px', color: brandDeep, wordBreak: 'break-all', fontWeight: 600 }}>
                         {p.callbacks?.[envKey]}
                       </code>
                     </div>
@@ -546,30 +578,31 @@ export default function PlatformAdminConsole() {
                 {/* Required Env Vars & Requested Scopes */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', fontSize: '12px' }}>
                   <div>
-                    <div style={{ fontWeight: 700, color: '#A1A1AA', marginBottom: '6px' }}>Required Environment Secrets:</div>
+                    <div style={{ fontWeight: 700, color: textSub, marginBottom: '6px' }}>Required Environment Secrets:</div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                       {p.envChecklist?.map((env: any) => (
                         <span
                           key={env.name}
                           style={{
-                            padding: '4px 8px',
-                            borderRadius: '6px',
-                            background: env.configured ? '#052E16' : '#27272A',
-                            color: env.configured ? '#4ADE80' : '#D4D4D8',
+                            padding: '4px 10px',
+                            borderRadius: '8px',
+                            background: env.configured ? '#DCFCE7' : bgSoft,
+                            color: env.configured ? '#166534' : brandDeep,
                             fontFamily: 'monospace',
                             fontSize: '11px',
+                            fontWeight: 600,
                           }}
                         >
-                          {env.name}: {env.configured ? 'Configured' : 'Unset (Sandbox)'}
+                          {env.name}: {env.configured ? 'Configured' : 'Sandbox Mode'}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <div style={{ fontWeight: 700, color: '#A1A1AA', marginBottom: '6px' }}>Requested OAuth Scopes:</div>
+                    <div style={{ fontWeight: 700, color: textSub, marginBottom: '6px' }}>Requested OAuth Scopes:</div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                       {p.requestedScopes?.map((sc: string) => (
-                        <span key={sc} style={{ padding: '3px 8px', borderRadius: '6px', background: '#27272A', color: '#E4E4E7', fontFamily: 'monospace', fontSize: '11px' }}>
+                        <span key={sc} style={{ padding: '4px 10px', borderRadius: '8px', background: '#F4F4F5', color: textMain, fontFamily: 'monospace', fontSize: '11px' }}>
                           {sc}
                         </span>
                       ))}
@@ -578,8 +611,8 @@ export default function PlatformAdminConsole() {
                 </div>
 
                 {p.provider === 'x' && (
-                  <div style={{ marginTop: '14px', padding: '10px 14px', background: '#121215', borderRadius: '10px', border: '1px solid #27272A', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '12px', color: '#D4D4D8' }}>
+                  <div style={{ marginTop: '14px', padding: '12px 16px', background: bgSoft, borderRadius: '12px', border: '1px solid #FFD8BE', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontSize: '12px', color: brandDeep }}>
                       <strong>X API Monthly Credit Budget Control:</strong> {p.monthlyBudgetUsed || 0} / {p.monthlyBudgetLimit || 10000} credits used
                     </span>
                     <button
@@ -599,25 +632,26 @@ export default function PlatformAdminConsole() {
                           'Increased X monthly credit budget cap by 5,000'
                         )
                       }
-                      style={{ padding: '4px 10px', borderRadius: '6px', border: '1px solid #3F3F46', background: '#27272A', color: '#FFFFFF', fontSize: '11px', cursor: 'pointer' }}
+                      className="btn-secondary"
+                      style={{ padding: '5px 12px', fontSize: '11px' }}
                     >
-                      +5,000 Credit Cap
+                      <span>+5,000 Credit Cap</span>
                     </button>
                   </div>
                 )}
 
                 {selectedGuideProvider === p.provider && (
-                  <div style={{ marginTop: '16px', padding: '16px', background: '#121215', borderRadius: '10px', border: '1px solid #3F3F46' }}>
-                    <h4 style={{ margin: '0 0 10px', fontSize: '14px', color: '#FDBA74' }}>
+                  <div style={{ marginTop: '16px', padding: '18px', background: bgPage, borderRadius: '14px', border: `1px solid ${borderCol}` }}>
+                    <h4 style={{ margin: '0 0 10px', fontSize: '14px', color: brandDeep, fontWeight: 800 }}>
                       Step-by-Step Developer Portal Setup ({p.displayName})
                     </h4>
-                    <ul style={{ margin: '0 0 12px', paddingLeft: '18px', fontSize: '12px', lineHeight: 1.7, color: '#D4D4D8' }}>
+                    <ul style={{ margin: '0 0 12px', paddingLeft: '18px', fontSize: '12px', lineHeight: 1.7, color: textSub }}>
                       {p.catalog?.setupSteps?.map((step: string) => (
                         <li key={step}>{step}</li>
                       ))}
                     </ul>
-                    <div style={{ fontSize: '12px', color: '#A1A1AA' }}>
-                      Portal: <a href={p.catalog?.portalUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#FF5A00' }}>{p.catalog?.portalUrl}</a> &bull; Official Docs: <a href={p.catalog?.docsUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#FF5A00' }}>{p.catalog?.docsUrl}</a>
+                    <div style={{ fontSize: '12px', color: textSub }}>
+                      Portal: <a href={p.catalog?.portalUrl} target="_blank" rel="noopener noreferrer" style={{ color: brandOrange, fontWeight: 600 }}>{p.catalog?.portalUrl}</a> &bull; Official Docs: <a href={p.catalog?.docsUrl} target="_blank" rel="noopener noreferrer" style={{ color: brandOrange, fontWeight: 600 }}>{p.catalog?.docsUrl}</a>
                     </div>
                   </div>
                 )}
@@ -629,13 +663,13 @@ export default function PlatformAdminConsole() {
         {/* 4. PUBLISHING OPERATIONS TAB */}
         {activeTab === 'publishing_ops' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            <div style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '20px' }}>
-              <h2 style={{ fontSize: '17px', fontWeight: 700, margin: '0 0 14px' }}>
-                Per-Target Delivery Status & Safe Reconciliation
+            <div className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '24px' }}>
+              <h2 style={{ fontSize: '18px', fontWeight: 800, margin: '0 0 14px', color: textMain }}>
+                Per-Target Delivery Status &amp; Safe Reconciliation
               </h2>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                 <thead>
-                  <tr style={{ borderBottom: '1px solid #27272A', textAlign: 'left', color: '#A1A1AA' }}>
+                  <tr style={{ borderBottom: `1px solid ${borderCol}`, textAlign: 'left', color: textSub }}>
                     <th style={{ padding: '10px' }}>Target ID</th>
                     <th style={{ padding: '10px' }}>Workspace</th>
                     <th style={{ padding: '10px' }}>Provider</th>
@@ -648,25 +682,25 @@ export default function PlatformAdminConsole() {
                 </thead>
                 <tbody>
                   {data.publishingOperations.targets.map((t: any) => (
-                    <tr key={t._id} style={{ borderBottom: '1px solid #27272A' }}>
+                    <tr key={t._id} style={{ borderBottom: `1px solid ${borderCol}` }}>
                       <td style={{ padding: '10px', fontFamily: 'monospace', fontSize: '12px' }}>{t._id}</td>
                       <td style={{ padding: '10px' }}>{t.workspaceId}</td>
-                      <td style={{ padding: '10px', textTransform: 'uppercase', fontWeight: 700 }}>{t.provider}</td>
+                      <td style={{ padding: '10px', textTransform: 'uppercase', fontWeight: 700, color: brandDeep }}>{t.provider}</td>
                       <td style={{ padding: '10px' }}>{t.publishedSegments} / {t.segmentCount}</td>
                       <td style={{ padding: '10px' }}>{new Date(t.scheduledAtUtc).toLocaleString()}</td>
                       <td style={{ padding: '10px' }}>
                         <span style={{
-                          padding: '3px 8px',
+                          padding: '4px 10px',
                           borderRadius: '999px',
                           fontSize: '11px',
                           fontWeight: 700,
-                          background: t.status === 'published' ? '#052E16' : t.status === 'queued' ? '#1E1B4B' : '#451A03',
-                          color: t.status === 'published' ? '#4ADE80' : t.status === 'queued' ? '#A5B4FC' : '#FDBA74',
+                          background: t.status === 'published' ? '#DCFCE7' : bgSoft,
+                          color: t.status === 'published' ? '#166534' : brandDeep,
                         }}>
                           {t.status}
                         </span>
                       </td>
-                      <td style={{ padding: '10px', color: '#F87171', fontSize: '12px' }}>{t.lastError || '—'}</td>
+                      <td style={{ padding: '10px', color: '#DC2626', fontSize: '12px' }}>{t.lastError || '—'}</td>
                       <td style={{ padding: '10px', display: 'flex', gap: '6px' }}>
                         <button
                           type="button"
@@ -676,9 +710,10 @@ export default function PlatformAdminConsole() {
                               `Retried target ${t._id} (preserved published segments)`
                             )
                           }
-                          style={{ padding: '4px 8px', borderRadius: '6px', border: '1px solid #3F3F46', background: '#27272A', color: '#FFFFFF', fontSize: '11px', cursor: 'pointer' }}
+                          className="btn-secondary"
+                          style={{ padding: '5px 10px', fontSize: '11px' }}
                         >
-                          Safe Retry
+                          <span>Safe Retry</span>
                         </button>
                         <button
                           type="button"
@@ -688,9 +723,10 @@ export default function PlatformAdminConsole() {
                               `Reconciled target ${t._id} via idempotency contract`
                             )
                           }
-                          style={{ padding: '4px 8px', borderRadius: '6px', border: '1px solid #3F3F46', background: 'transparent', color: '#FDBA74', fontSize: '11px', cursor: 'pointer' }}
+                          className="btn-primary"
+                          style={{ padding: '5px 10px', fontSize: '11px' }}
                         >
-                          Reconcile
+                          <span>Reconcile</span>
                         </button>
                       </td>
                     </tr>
@@ -699,11 +735,11 @@ export default function PlatformAdminConsole() {
               </table>
             </div>
 
-            <div style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '20px' }}>
-              <h2 style={{ fontSize: '17px', fontWeight: 700, margin: '0 0 14px' }}>Attempt Timeline & Fencing Tokens</h2>
+            <div className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '24px' }}>
+              <h2 style={{ fontSize: '18px', fontWeight: 800, margin: '0 0 14px', color: textMain }}>Attempt Timeline &amp; Fencing Tokens</h2>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                 <thead>
-                  <tr style={{ borderBottom: '1px solid #27272A', textAlign: 'left', color: '#A1A1AA' }}>
+                  <tr style={{ borderBottom: `1px solid ${borderCol}`, textAlign: 'left', color: textSub }}>
                     <th style={{ padding: '10px' }}>Attempt ID</th>
                     <th style={{ padding: '10px' }}>Target</th>
                     <th style={{ padding: '10px' }}>Provider</th>
@@ -715,10 +751,10 @@ export default function PlatformAdminConsole() {
                 </thead>
                 <tbody>
                   {data.publishingOperations.attempts.map((a: any) => (
-                    <tr key={a._id} style={{ borderBottom: '1px solid #27272A' }}>
+                    <tr key={a._id} style={{ borderBottom: `1px solid ${borderCol}` }}>
                       <td style={{ padding: '10px', fontFamily: 'monospace', fontSize: '12px' }}>{a._id}</td>
                       <td style={{ padding: '10px' }}>{a.targetId}</td>
-                      <td style={{ padding: '10px', textTransform: 'uppercase' }}>{a.provider}</td>
+                      <td style={{ padding: '10px', textTransform: 'uppercase', fontWeight: 700 }}>{a.provider}</td>
                       <td style={{ padding: '10px' }}>#{a.fencingToken}</td>
                       <td style={{ padding: '10px' }}>{a.httpStatus}</td>
                       <td style={{ padding: '10px', fontFamily: 'monospace', fontSize: '11px' }}>{(a.remoteIds || []).join(', ')}</td>
@@ -733,11 +769,11 @@ export default function PlatformAdminConsole() {
 
         {/* 5. ANALYTICS OPERATIONS TAB */}
         {activeTab === 'analytics_ops' && (
-          <div style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '20px' }}>
-            <h2 style={{ fontSize: '17px', fontWeight: 700, margin: '0 0 14px' }}>Analytics Coverage & Sync Freshness by Provider</h2>
+          <div className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '24px' }}>
+            <h2 style={{ fontSize: '18px', fontWeight: 800, margin: '0 0 14px', color: textMain }}>Analytics Coverage &amp; Sync Freshness by Provider</h2>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
               <thead>
-                <tr style={{ borderBottom: '1px solid #27272A', textAlign: 'left', color: '#A1A1AA' }}>
+                <tr style={{ borderBottom: `1px solid ${borderCol}`, textAlign: 'left', color: textSub }}>
                   <th style={{ padding: '10px' }}>Provider</th>
                   <th style={{ padding: '10px' }}>Snapshots Stored</th>
                   <th style={{ padding: '10px' }}>Latest Sync</th>
@@ -746,12 +782,12 @@ export default function PlatformAdminConsole() {
               </thead>
               <tbody>
                 {data.analyticsOperations.coverageByProvider.map((c: any) => (
-                  <tr key={c.provider} style={{ borderBottom: '1px solid #27272A' }}>
-                    <td style={{ padding: '12px 10px', fontWeight: 700, textTransform: 'uppercase' }}>{c.provider}</td>
+                  <tr key={c.provider} style={{ borderBottom: `1px solid ${borderCol}` }}>
+                    <td style={{ padding: '12px 10px', fontWeight: 700, textTransform: 'uppercase', color: brandDeep }}>{c.provider}</td>
                     <td style={{ padding: '12px 10px' }}>{c.snapshots}</td>
                     <td style={{ padding: '12px 10px' }}>{c.latestSync ? new Date(c.latestSync).toLocaleString() : '—'}</td>
                     <td style={{ padding: '12px 10px' }}>
-                      <span style={{ padding: '3px 9px', borderRadius: '999px', background: '#27272A', fontSize: '11px' }}>
+                      <span style={{ padding: '4px 10px', borderRadius: '999px', background: bgSoft, color: brandDeep, fontWeight: 700, fontSize: '11px' }}>
                         {c.status}
                       </span>
                     </td>
@@ -764,13 +800,13 @@ export default function PlatformAdminConsole() {
 
         {/* 6. LEADS & INQUIRIES INBOX TAB */}
         {activeTab === 'inquiries' && (
-          <div style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '20px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
+          <div className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '24px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px', flexWrap: 'wrap', gap: '12px' }}>
               <div>
-                <h2 style={{ fontSize: '17px', fontWeight: 700, margin: '0 0 4px' }}>
-                  Leads, Contact Submissions & Chat Requests Inbox
+                <h2 style={{ fontSize: '18px', fontWeight: 800, margin: '0 0 4px', color: textMain }}>
+                  Leads, Contact Submissions &amp; Chat Requests Inbox
                 </h2>
-                <p style={{ fontSize: '12px', color: '#A1A1AA', margin: 0 }}>
+                <p style={{ fontSize: '12px', color: textSub, margin: 0 }}>
                   Every submission from /contact/submit, /api/contact, and /api/chat/* with original reference IDs, status, and owner assignment.
                 </p>
               </div>
@@ -779,14 +815,15 @@ export default function PlatformAdminConsole() {
                 placeholder="Search reference, email, name, category..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                style={{ padding: '8px 12px', borderRadius: '8px', border: '1px solid #3F3F46', background: '#121215', color: '#FFFFFF', fontSize: '13px', minWidth: '280px' }}
+                className="form-input"
+                style={{ minWidth: '280px', fontSize: '13px' }}
               />
             </div>
 
             <div style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                 <thead>
-                  <tr style={{ borderBottom: '1px solid #27272A', textAlign: 'left', color: '#A1A1AA' }}>
+                  <tr style={{ borderBottom: `1px solid ${borderCol}`, textAlign: 'left', color: textSub }}>
                     <th style={{ padding: '10px' }}>Reference</th>
                     <th style={{ padding: '10px' }}>Kind / Category</th>
                     <th style={{ padding: '10px' }}>Contact</th>
@@ -797,20 +834,20 @@ export default function PlatformAdminConsole() {
                 </thead>
                 <tbody>
                   {filteredInquiries.map((inq: any) => (
-                    <tr key={inq._id} style={{ borderBottom: '1px solid #27272A' }}>
-                      <td style={{ padding: '12px 10px', fontFamily: 'monospace', fontWeight: 700, color: '#FDBA74' }}>
+                    <tr key={inq._id} style={{ borderBottom: `1px solid ${borderCol}` }}>
+                      <td style={{ padding: '12px 10px', fontFamily: 'monospace', fontWeight: 700, color: brandDeep }}>
                         {inq.reference}
                       </td>
                       <td style={{ padding: '12px 10px' }}>
-                        <div style={{ fontWeight: 600 }}>{inq.category}</div>
-                        <div style={{ fontSize: '11px', color: '#71717A' }}>{inq.kind}</div>
+                        <div style={{ fontWeight: 600, color: textMain }}>{inq.category}</div>
+                        <div style={{ fontSize: '11px', color: textMuted }}>{inq.kind}</div>
                       </td>
                       <td style={{ padding: '12px 10px' }}>
-                        <div style={{ fontWeight: 700 }}>{inq.name}</div>
-                        <div style={{ fontSize: '12px', color: '#A1A1AA' }}>{inq.email}</div>
-                        {inq.company && <div style={{ fontSize: '11px', color: '#71717A' }}>{inq.company}</div>}
+                        <div style={{ fontWeight: 700, color: textMain }}>{inq.name}</div>
+                        <div style={{ fontSize: '12px', color: textSub }}>{inq.email}</div>
+                        {inq.company && <div style={{ fontSize: '11px', color: textMuted }}>{inq.company}</div>}
                       </td>
-                      <td style={{ padding: '12px 10px', maxWidth: '340px', color: '#D4D4D8', fontSize: '12px' }}>
+                      <td style={{ padding: '12px 10px', maxWidth: '340px', color: textSub, fontSize: '12px' }}>
                         {inq.message}
                       </td>
                       <td style={{ padding: '12px 10px', fontSize: '12px' }}>
@@ -830,7 +867,8 @@ export default function PlatformAdminConsole() {
                               `Updated inquiry ${inq.reference} to ${e.target.value}`
                             )
                           }
-                          style={{ background: '#121215', color: '#FFFFFF', border: '1px solid #3F3F46', borderRadius: '6px', padding: '5px 8px', fontSize: '12px' }}
+                          className="form-input"
+                          style={{ padding: '5px 8px', fontSize: '12px' }}
                         >
                           <option value="New">New</option>
                           <option value="In Review">In Review</option>
@@ -849,11 +887,11 @@ export default function PlatformAdminConsole() {
 
         {/* 7. AUDIT LOG TAB */}
         {activeTab === 'audit_log' && (
-          <div style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '20px' }}>
-            <h2 style={{ fontSize: '17px', fontWeight: 700, margin: '0 0 14px' }}>Immutable Security & Operations Audit Log</h2>
+          <div className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '24px' }}>
+            <h2 style={{ fontSize: '18px', fontWeight: 800, margin: '0 0 14px', color: textMain }}>Immutable Security &amp; Operations Audit Log</h2>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
               <thead>
-                <tr style={{ borderBottom: '1px solid #27272A', textAlign: 'left', color: '#A1A1AA' }}>
+                <tr style={{ borderBottom: `1px solid ${borderCol}`, textAlign: 'left', color: textSub }}>
                   <th style={{ padding: '10px' }}>Timestamp</th>
                   <th style={{ padding: '10px' }}>Action</th>
                   <th style={{ padding: '10px' }}>Actor</th>
@@ -864,13 +902,13 @@ export default function PlatformAdminConsole() {
               </thead>
               <tbody>
                 {data.auditEvents.map((ev: any) => (
-                  <tr key={ev._id} style={{ borderBottom: '1px solid #27272A' }}>
-                    <td style={{ padding: '10px', fontSize: '12px', color: '#A1A1AA' }}>{new Date(ev.createdAt).toLocaleString()}</td>
-                    <td style={{ padding: '10px', fontWeight: 700, color: '#FDBA74' }}>{ev.action}</td>
+                  <tr key={ev._id} style={{ borderBottom: `1px solid ${borderCol}` }}>
+                    <td style={{ padding: '10px', fontSize: '12px', color: textSub }}>{new Date(ev.createdAt).toLocaleString()}</td>
+                    <td style={{ padding: '10px', fontWeight: 700, color: brandDeep }}>{ev.action}</td>
                     <td style={{ padding: '10px' }}>{ev.actorEmail || ev.actorUserId || 'system'}</td>
                     <td style={{ padding: '10px', fontFamily: 'monospace', fontSize: '12px' }}>{ev.workspaceId || 'platform'}</td>
                     <td style={{ padding: '10px' }}>{ev.targetType}:{ev.targetId}</td>
-                    <td style={{ padding: '10px', fontFamily: 'monospace', fontSize: '11px', color: '#A1A1AA' }}>
+                    <td style={{ padding: '10px', fontFamily: 'monospace', fontSize: '11px', color: textSub }}>
                       {JSON.stringify(ev.metadata)}
                     </td>
                   </tr>
@@ -882,18 +920,18 @@ export default function PlatformAdminConsole() {
 
         {/* 8. SETTINGS TAB */}
         {activeTab === 'settings' && (
-          <div style={{ background: '#18181B', border: '1px solid #27272A', borderRadius: '14px', padding: '24px' }}>
-            <h2 style={{ fontSize: '17px', fontWeight: 700, margin: '0 0 12px' }}>Platform Security, Retention & Encryption Settings</h2>
+          <div className="card-base" style={{ background: bgCard, border: `1px solid ${borderCol}`, borderRadius: '18px', padding: '24px' }}>
+            <h2 style={{ fontSize: '18px', fontWeight: 800, margin: '0 0 12px', color: textMain }}>Platform Security, Retention &amp; Encryption Settings</h2>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', fontSize: '13px' }}>
-              <div style={{ padding: '16px', background: '#121215', borderRadius: '10px', border: '1px solid #27272A' }}>
-                <div style={{ fontWeight: 700, color: '#FFFFFF', marginBottom: '6px' }}>Tenant Grant Encryption (AES-256-GCM)</div>
-                <p style={{ color: '#A1A1AA', margin: '0 0 8px' }}>
+              <div style={{ padding: '18px', background: bgPage, borderRadius: '14px', border: `1px solid ${borderCol}` }}>
+                <div style={{ fontWeight: 700, color: textMain, marginBottom: '6px' }}>Tenant Grant Encryption (AES-256-GCM)</div>
+                <p style={{ color: textSub, margin: '0 0 8px' }}>
                   Active Key ID: <code>{process.env.GRANT_ENCRYPTION_KEY_ID || 'v1'}</code>. Authenticated encryption with workspace:provider AAD binding and key rotation support.
                 </p>
               </div>
-              <div style={{ padding: '16px', background: '#121215', borderRadius: '10px', border: '1px solid #27272A' }}>
-                <div style={{ fontWeight: 700, color: '#FFFFFF', marginBottom: '6px' }}>Data Retention & Deletion Policy</div>
-                <p style={{ color: '#A1A1AA', margin: 0 }}>
+              <div style={{ padding: '18px', background: bgPage, borderRadius: '14px', border: `1px solid ${borderCol}` }}>
+                <div style={{ fontWeight: 700, color: textMain, marginBottom: '6px' }}>Data Retention &amp; Deletion Policy</div>
+                <p style={{ color: textSub, margin: 0 }}>
                   OAuth transactions expire in 10 minutes (TTL index). Revoked grants and disconnected social tokens are purged immediately upon deauthorization or Meta deletion callback.
                 </p>
               </div>
