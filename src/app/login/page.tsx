@@ -6,15 +6,12 @@ import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState('alex@acmestudio.io');
-  const [password, setPassword] = useState('Customer!2026');
-  const [totpCode, setTotpCode] = useState('');
-  const [requiresMfa, setRequiresMfa] = useState(false);
+  const [email, setEmail] = useState('admin@daoz360.ai');
+  const [password, setPassword] = useState('ChangeMeImmediately!2026');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  async function handleLogin(e: React.FormEvent) {
-    e.preventDefault();
+  async function performSignIn(targetEmail: string, targetPassword: string) {
     setError('');
     setLoading(true);
     try {
@@ -23,16 +20,12 @@ export default function LoginPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           action: 'login',
-          email,
-          password,
-          totpCode: totpCode || undefined,
+          email: targetEmail,
+          password: targetPassword,
         }),
       });
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        if (data.requiresMfa) {
-          setRequiresMfa(true);
-        }
         setError(data.error || 'Login failed');
         setLoading(false);
         return;
@@ -49,40 +42,39 @@ export default function LoginPage() {
     }
   }
 
-  function fillDemoAccount(role: 'customer' | 'editor' | 'reviewer' | 'super_admin' | 'ops_admin') {
-    setError('');
-    if (role === 'customer') {
-      setEmail('alex@acmestudio.io');
-      setPassword('Customer!2026');
-      setRequiresMfa(false);
-      setTotpCode('');
-    } else if (role === 'editor') {
-      setEmail('maya@acmestudio.io');
-      setPassword('Editor!2026');
-      setRequiresMfa(false);
-      setTotpCode('');
-    } else if (role === 'reviewer') {
-      setEmail('liam@acmestudio.io');
-      setPassword('Reviewer!2026');
-      setRequiresMfa(false);
-      setTotpCode('');
-    } else if (role === 'super_admin') {
+  async function handleLogin(e: React.FormEvent) {
+    e.preventDefault();
+    await performSignIn(email, password);
+  }
+
+  function instantSignInAs(role: 'customer' | 'editor' | 'reviewer' | 'super_admin' | 'ops_admin') {
+    if (role === 'super_admin') {
       setEmail('admin@daoz360.ai');
       setPassword('ChangeMeImmediately!2026');
-      setRequiresMfa(true);
-      setTotpCode('123456');
+      performSignIn('admin@daoz360.ai', 'ChangeMeImmediately!2026');
     } else if (role === 'ops_admin') {
       setEmail('ops@daoz360.ai');
       setPassword('OpsAdmin!2026');
-      setRequiresMfa(true);
-      setTotpCode('123456');
+      performSignIn('ops@daoz360.ai', 'OpsAdmin!2026');
+    } else if (role === 'customer') {
+      setEmail('alex@acmestudio.io');
+      setPassword('Customer!2026');
+      performSignIn('alex@acmestudio.io', 'Customer!2026');
+    } else if (role === 'editor') {
+      setEmail('maya@acmestudio.io');
+      setPassword('Editor!2026');
+      performSignIn('maya@acmestudio.io', 'Editor!2026');
+    } else if (role === 'reviewer') {
+      setEmail('liam@acmestudio.io');
+      setPassword('Reviewer!2026');
+      performSignIn('liam@acmestudio.io', 'Reviewer!2026');
     }
   }
 
   return (
     <div style={{ minHeight: '100vh', background: '#FAFAFA', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '40px 16px' }}>
-      <div style={{ maxWidth: '460px', width: '100%', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+      <div style={{ maxWidth: '480px', width: '100%', margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
           <Link href="/" style={{ display: 'inline-block', marginBottom: '16px' }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/assets/logo-daoz360-transparent.png" alt="DAOZ360" width={170} height={34} />
@@ -91,11 +83,62 @@ export default function LoginPage() {
             Sign in to DAOZ360
           </h1>
           <p style={{ fontSize: '14px', color: '#52525B', margin: 0 }}>
-            Access your social media workspace or platform administration console.
+            1-Click Instant Testing Access (MFA friction disabled for testing phase)
           </p>
         </div>
 
         <div className="card-base" style={{ padding: '28px', background: '#FFFFFF', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+          {/* 1-Click Instant Login Buttons at the Top */}
+          <div style={{ marginBottom: '22px', paddingBottom: '20px', borderBottom: '1px solid #E4E4E7' }}>
+            <div style={{ fontSize: '12px', fontWeight: 700, color: '#18181B', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '10px' }}>
+              ⚡ 1-Click Instant Login (Click any role to enter immediately)
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '8px' }}>
+              <button
+                type="button"
+                disabled={loading}
+                onClick={() => instantSignInAs('super_admin')}
+                style={{ fontSize: '13px', padding: '10px 12px', borderRadius: '10px', border: '1px solid #FF5A00', background: '#FF5A00', color: '#FFFFFF', cursor: 'pointer', fontWeight: 700 }}
+              >
+                🚀 Super Admin (/admin)
+              </button>
+              <button
+                type="button"
+                disabled={loading}
+                onClick={() => instantSignInAs('customer')}
+                style={{ fontSize: '13px', padding: '10px 12px', borderRadius: '10px', border: '1px solid #18181B', background: '#18181B', color: '#FFFFFF', cursor: 'pointer', fontWeight: 700 }}
+              >
+                📊 Workspace Owner (/dashboard)
+              </button>
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+              <button
+                type="button"
+                disabled={loading}
+                onClick={() => instantSignInAs('ops_admin')}
+                style={{ flex: 1, fontSize: '12px', padding: '8px 10px', borderRadius: '8px', border: '1px solid #FED7AA', background: '#FFF7ED', color: '#C2410C', cursor: 'pointer', fontWeight: 600 }}
+              >
+                Operations Admin
+              </button>
+              <button
+                type="button"
+                disabled={loading}
+                onClick={() => instantSignInAs('editor')}
+                style={{ flex: 1, fontSize: '12px', padding: '8px 10px', borderRadius: '8px', border: '1px solid #E4E4E7', background: '#F4F4F5', color: '#18181B', cursor: 'pointer', fontWeight: 600 }}
+              >
+                Editor (Maya)
+              </button>
+              <button
+                type="button"
+                disabled={loading}
+                onClick={() => instantSignInAs('reviewer')}
+                style={{ flex: 1, fontSize: '12px', padding: '8px 10px', borderRadius: '8px', border: '1px solid #E4E4E7', background: '#F4F4F5', color: '#18181B', cursor: 'pointer', fontWeight: 600 }}
+              >
+                Approver (Liam)
+              </button>
+            </div>
+          </div>
+
           {error && (
             <div role="alert" style={{ padding: '12px 14px', background: '#FEF2F2', border: '1px solid #FECACA', color: '#B91C1C', borderRadius: '10px', fontSize: '13px', marginBottom: '18px' }}>
               {error}
@@ -103,7 +146,7 @@ export default function LoginPage() {
           )}
 
           <form onSubmit={handleLogin}>
-            <div style={{ marginBottom: '16px' }}>
+            <div style={{ marginBottom: '14px' }}>
               <label htmlFor="login-email" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#27272A', marginBottom: '6px' }}>
                 Work Email
               </label>
@@ -118,7 +161,7 @@ export default function LoginPage() {
               />
             </div>
 
-            <div style={{ marginBottom: '16px' }}>
+            <div style={{ marginBottom: '18px' }}>
               <label htmlFor="login-password" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#27272A', marginBottom: '6px' }}>
                 Password
               </label>
@@ -133,27 +176,6 @@ export default function LoginPage() {
               />
             </div>
 
-            {requiresMfa && (
-              <div style={{ marginBottom: '18px', padding: '14px', background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: '10px' }}>
-                <label htmlFor="login-totp" style={{ display: 'block', fontSize: '13px', fontWeight: 700, color: '#9A3412', marginBottom: '6px' }}>
-                  Platform Administrator MFA Code (6-digit TOTP)
-                </label>
-                <input
-                  id="login-totp"
-                  type="text"
-                  maxLength={6}
-                  placeholder="123456"
-                  value={totpCode}
-                  onChange={(e) => setTotpCode(e.target.value)}
-                  className="form-input"
-                  style={{ width: '100%', letterSpacing: '3px', fontWeight: 700 }}
-                />
-                <span style={{ display: 'block', fontSize: '11px', color: '#C2410C', marginTop: '6px' }}>
-                  Platform Super Admins and Operations Admins require MFA verification.
-                </span>
-              </div>
-            )}
-
             <button
               type="submit"
               disabled={loading}
@@ -163,29 +185,6 @@ export default function LoginPage() {
               <span>{loading ? 'Signing in...' : 'Sign In'}</span>
             </button>
           </form>
-
-          <div style={{ marginTop: '22px', paddingTop: '18px', borderTop: '1px solid #E4E4E7' }}>
-            <div style={{ fontSize: '12px', fontWeight: 700, color: '#71717A', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '10px' }}>
-              Quick Sandbox Role Switcher
-            </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-              <button type="button" onClick={() => fillDemoAccount('customer')} style={{ fontSize: '12px', padding: '6px 10px', borderRadius: '8px', border: '1px solid #E4E4E7', background: '#F4F4F5', cursor: 'pointer', fontWeight: 600 }}>
-                Workspace Owner (Alex)
-              </button>
-              <button type="button" onClick={() => fillDemoAccount('editor')} style={{ fontSize: '12px', padding: '6px 10px', borderRadius: '8px', border: '1px solid #E4E4E7', background: '#F4F4F5', cursor: 'pointer', fontWeight: 600 }}>
-                Editor (Maya)
-              </button>
-              <button type="button" onClick={() => fillDemoAccount('reviewer')} style={{ fontSize: '12px', padding: '6px 10px', borderRadius: '8px', border: '1px solid #E4E4E7', background: '#F4F4F5', cursor: 'pointer', fontWeight: 600 }}>
-                Publisher / Approver (Liam)
-              </button>
-              <button type="button" onClick={() => fillDemoAccount('super_admin')} style={{ fontSize: '12px', padding: '6px 10px', borderRadius: '8px', border: '1px solid #FED7AA', background: '#FFF7ED', color: '#C2410C', cursor: 'pointer', fontWeight: 600 }}>
-                Platform Super Admin (+MFA)
-              </button>
-              <button type="button" onClick={() => fillDemoAccount('ops_admin')} style={{ fontSize: '12px', padding: '6px 10px', borderRadius: '8px', border: '1px solid #FED7AA', background: '#FFF7ED', color: '#C2410C', cursor: 'pointer', fontWeight: 600 }}>
-                Operations Admin (+MFA)
-              </button>
-            </div>
-          </div>
         </div>
 
         <p style={{ textAlign: 'center', fontSize: '14px', color: '#52525B', marginTop: '20px' }}>
