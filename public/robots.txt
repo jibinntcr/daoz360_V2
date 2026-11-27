@@ -1,0 +1,7 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Host & Sitemap
+Host: https://daoz360.ai
+Sitemap: https://daoz360.ai/sitemap.xml

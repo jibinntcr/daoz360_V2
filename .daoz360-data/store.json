@@ -1,0 +1,1910 @@
+{
+  "users": [
+    {
+      "_id": "usr_superadmin_01",
+      "email": "admin@daoz360.ai",
+      "name": "DAOZ360 Super Admin",
+      "passwordHash": "pbkdf2_sha512$10000$60531df6038a47142d38251873ddeed5$cc294fb9b4aea67ee0ce0cc13659c71548ec6096c2b7f410c0622f78646c8f31c534847c4592e1f6fef62a8cc5ad6781e38fa943bf6ae9e4852324a39179983c",
+      "emailVerified": true,
+      "platformRole": "super_admin",
+      "mfaEnabled": true,
+      "mfaSecret": "JBSWY3DPEHPK3PXP",
+      "status": "active",
+      "defaultWorkspaceId": "ws_daoz360_admin",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "usr_opsadmin_01",
+      "email": "ops@daoz360.ai",
+      "name": "Operations Admin",
+      "passwordHash": "pbkdf2_sha512$10000$5cd30fd3a9855a08ed7589665832d320$3a1c5678bae7722fb84fc321f6acdf2a20fe31163a107a5f382619c2cad4db368155699ab4a9f66f589a59105c2a6a810364aed4e37855d55b3d210240e51fbc",
+      "emailVerified": true,
+      "platformRole": "operations_admin",
+      "mfaEnabled": true,
+      "mfaSecret": "JBSWY3DPEHPK3PXP",
+      "status": "active",
+      "defaultWorkspaceId": "ws_daoz360_admin",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "usr_customer_01",
+      "email": "alex@acmestudio.io",
+      "name": "Alex Morgan",
+      "passwordHash": "pbkdf2_sha512$10000$1f65ecf5cd1a03e1400805241a0b63b1$1e7d8296af43c529bddeff3c2e95d6744174b5e7892460808daec19bd981603b5a46ac573000262da0a3bdc8a7b4b221a19ee077497b41f5d88b2528b6b9820e",
+      "emailVerified": true,
+      "platformRole": "user",
+      "mfaEnabled": false,
+      "status": "active",
+      "defaultWorkspaceId": "ws_acme_growth",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "usr_editor_01",
+      "email": "maya@acmestudio.io",
+      "name": "Maya Lin",
+      "passwordHash": "pbkdf2_sha512$10000$80db70842c210fca5960c35c6bb158dc$c9610632a4f57a35e3ee6688a1976dedec25defc966227a7e81cf43622c044c62750d445fd8b54ce034ae26ce826d5209959096e5fe216755d8ff05e60dea3ce",
+      "emailVerified": true,
+      "platformRole": "user",
+      "mfaEnabled": false,
+      "status": "active",
+      "defaultWorkspaceId": "ws_acme_growth",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "usr_reviewer_01",
+      "email": "liam@acmestudio.io",
+      "name": "Liam Patel",
+      "passwordHash": "pbkdf2_sha512$10000$f8abc2e38edbe175c1d617df2d609789$c92e2e411009941aedd2c116f86eba8c3550881c6476ca6b420377773210fb96253ac008f56e2780b513dc2af3007e272d25ca8d83d8439e3c1bd46d7f5539ee",
+      "emailVerified": true,
+      "platformRole": "user",
+      "mfaEnabled": false,
+      "status": "active",
+      "defaultWorkspaceId": "ws_acme_growth",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "usr_mwyi2mbn_H08h6bIi",
+      "email": "founder_1795754850179@test.io",
+      "name": "Founder One",
+      "passwordHash": "pbkdf2_sha512$10000$f063598b301a54d7bdfca0196a4ac5bb$fb799ae2232f55e78c321f9d0370733b97503503490d0baac58b60d101c52e28d2305f1bda3a33ba07d575ca0a5a491959630b52ffdc734721ece1244fa7add4",
+      "emailVerified": true,
+      "platformRole": "user",
+      "mfaEnabled": false,
+      "status": "active",
+      "defaultWorkspaceId": "ws_mwyi2mbn_H5rt2tGV",
+      "createdAt": "2026-11-27T04:47:30.179Z",
+      "updatedAt": "2026-11-27T04:47:30.179Z"
+    }
+  ],
+  "sessions": [
+    {
+      "_id": "ses_mwyi2mbm_ESEDeBJgRmk8ITKs",
+      "userId": "usr_superadmin_01",
+      "workspaceId": "ws_daoz360_admin",
+      "csrfToken": "jowBuaYdD5RB-MIzgKZ1jMhF",
+      "mfaVerified": true,
+      "expiresAt": "2026-12-04T04:47:30.178Z",
+      "createdAt": "2026-11-27T04:47:30.178Z"
+    },
+    {
+      "_id": "ses_mwyi2mbq_VkNfY6TWKacQATRe",
+      "userId": "usr_mwyi2mbn_H08h6bIi",
+      "workspaceId": "ws_mwyi2mbn_H5rt2tGV",
+      "csrfToken": "kU3u3gH-sbj9ZgKlXauq_zvV",
+      "mfaVerified": true,
+      "expiresAt": "2026-12-04T04:47:30.182Z",
+      "createdAt": "2026-11-27T04:47:30.182Z"
+    }
+  ],
+  "workspaces": [
+    {
+      "_id": "ws_daoz360_admin",
+      "name": "DAOZ360 Brand & Sandbox Workspace",
+      "slug": "daoz360-internal",
+      "planId": "agency",
+      "billingInterval": "yearly",
+      "currency": "USD",
+      "status": "active",
+      "isAdminWorkspace": true,
+      "limits": {
+        "accounts": 40,
+        "users": 10,
+        "deliveriesPerMonth": 5000
+      },
+      "usage": {
+        "currentMonth": "2026-11",
+        "deliveriesUsed": 18,
+        "deliveriesReserved": 4
+      },
+      "approvalRule": "optional",
+      "publicSocialPage": {
+        "enabled": true,
+        "slug": "daoz360",
+        "title": "DAOZ360 Official Social Feed",
+        "bio": "Plan. Publish. Grow. Official updates from DAOZ360.",
+        "publishedPostIds": [
+          "drf_sample_published_01"
+        ]
+      },
+      "aiConfig": {
+        "provider": "gemini",
+        "toneSamples": [
+          "Bring your content, publishing and team into one workspace.",
+          "More creating. Less coordinating."
+        ],
+        "customInstructions": "Write with calm precision, clear structure, and zero hype."
+      },
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "ws_acme_growth",
+      "name": "Acme Studio Marketing",
+      "slug": "acme-studio",
+      "planId": "growth",
+      "billingInterval": "monthly",
+      "currency": "INR",
+      "status": "active",
+      "isAdminWorkspace": false,
+      "limits": {
+        "accounts": 15,
+        "users": 3,
+        "deliveriesPerMonth": 1500
+      },
+      "usage": {
+        "currentMonth": "2026-11",
+        "deliveriesUsed": 43,
+        "deliveriesReserved": 7
+      },
+      "approvalRule": "required_before_schedule",
+      "publicSocialPage": {
+        "enabled": true,
+        "slug": "acme-studio",
+        "title": "Acme Studio Social Highlights",
+        "bio": "Curated threads, product launches, and design insights from Acme Studio.",
+        "publishedPostIds": [
+          "drf_sample_published_01"
+        ]
+      },
+      "aiConfig": {
+        "provider": "gemini",
+        "toneSamples": [
+          "Design systems work best when engineering and product speak the same language.",
+          "Here is how we cut our weekly content review loop from 4 days to 45 minutes."
+        ],
+        "customInstructions": "Keep threads concise, actionable, and human."
+      },
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "ws_mwyi2mbn_H5rt2tGV",
+      "name": "Founder Brand",
+      "slug": "founder-brand-2mbn",
+      "planId": "growth",
+      "billingInterval": "monthly",
+      "currency": "INR",
+      "status": "active",
+      "limits": {
+        "accounts": 15,
+        "users": 3,
+        "deliveriesPerMonth": 1500
+      },
+      "usage": {
+        "currentMonth": "2026-11",
+        "deliveriesUsed": 0,
+        "deliveriesReserved": 0
+      },
+      "approvalRule": "required_before_schedule",
+      "publicSocialPage": {
+        "enabled": false,
+        "slug": "founder-brand-2mbn",
+        "title": "Founder Brand Social Feed",
+        "bio": "",
+        "publishedPostIds": []
+      },
+      "createdAt": "2026-11-27T04:47:30.179Z",
+      "updatedAt": "2026-11-27T04:47:30.179Z"
+    }
+  ],
+  "memberships": [
+    {
+      "_id": "mem_01",
+      "workspaceId": "ws_daoz360_admin",
+      "userId": "usr_superadmin_01",
+      "role": "owner",
+      "status": "active",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "mem_02",
+      "workspaceId": "ws_daoz360_admin",
+      "userId": "usr_opsadmin_01",
+      "role": "admin",
+      "status": "active",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "mem_03",
+      "workspaceId": "ws_acme_growth",
+      "userId": "usr_customer_01",
+      "role": "owner",
+      "status": "active",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "mem_04",
+      "workspaceId": "ws_acme_growth",
+      "userId": "usr_editor_01",
+      "role": "editor",
+      "status": "active",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "mem_05",
+      "workspaceId": "ws_acme_growth",
+      "userId": "usr_reviewer_01",
+      "role": "publisher",
+      "status": "active",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "mem_mwyi2mbq_3LK7lvgE",
+      "workspaceId": "ws_mwyi2mbn_H5rt2tGV",
+      "userId": "usr_mwyi2mbn_H08h6bIi",
+      "role": "owner",
+      "status": "active",
+      "createdAt": "2026-11-27T04:47:30.179Z",
+      "updatedAt": "2026-11-27T04:47:30.179Z"
+    }
+  ],
+  "invitations": [],
+  "account_groups": [
+    {
+      "_id": "grp_acme_core",
+      "workspaceId": "ws_acme_growth",
+      "name": "Core Brand Channels",
+      "description": "Primary X, LinkedIn, and Substack Notes channels for Acme Studio",
+      "color": "#FF5A00",
+      "accountIds": [
+        "acc_acme_x",
+        "acc_acme_linkedin",
+        "acc_acme_substack"
+      ],
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    }
+  ],
+  "provider_app_settings": [
+    {
+      "_id": "facebook",
+      "provider": "facebook",
+      "displayName": "Facebook Pages (Meta Graph API)",
+      "apiVersion": "v21.0",
+      "accessTier": "Standard / Advanced Access (Business Verification)",
+      "approvalStatus": "pending_review",
+      "environmentFlags": {
+        "development": true,
+        "staging": true,
+        "production": false
+      },
+      "requestedScopes": [
+        "pages_show_list",
+        "pages_read_engagement",
+        "pages_manage_posts",
+        "read_insights"
+      ],
+      "webhookStatus": "unconfigured",
+      "deletionCallbackStatus": "verified",
+      "lastHealthCheckAt": "2026-11-27T04:47:30.151Z",
+      "lastHealthStatus": "missing_credentials",
+      "lastDiagnosticMessage": "Set META_FACEBOOK_APP_ID and META_FACEBOOK_APP_SECRET to enable live OAuth.",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "instagram",
+      "provider": "instagram",
+      "displayName": "Instagram Business & Creator (Instagram Login)",
+      "apiVersion": "v21.0",
+      "accessTier": "Instagram API with Instagram Login",
+      "approvalStatus": "pending_review",
+      "environmentFlags": {
+        "development": true,
+        "staging": true,
+        "production": false
+      },
+      "requestedScopes": [
+        "instagram_business_basic",
+        "instagram_business_content_publish",
+        "instagram_business_manage_insights"
+      ],
+      "webhookStatus": "unconfigured",
+      "deletionCallbackStatus": "verified",
+      "lastHealthCheckAt": "2026-11-27T04:47:30.151Z",
+      "lastHealthStatus": "missing_credentials",
+      "lastDiagnosticMessage": "Set INSTAGRAM_CLIENT_ID and INSTAGRAM_CLIENT_SECRET to enable live OAuth.",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "linkedin",
+      "provider": "linkedin",
+      "displayName": "LinkedIn Member & Organization (Versioned REST)",
+      "apiVersion": "202411",
+      "accessTier": "Share on LinkedIn + Community Management API",
+      "approvalStatus": "pending_review",
+      "environmentFlags": {
+        "development": true,
+        "staging": true,
+        "production": false
+      },
+      "requestedScopes": [
+        "openid",
+        "profile",
+        "email",
+        "w_member_social",
+        "w_organization_social",
+        "r_organization_social",
+        "rw_organization_admin",
+        "r_member_postAnalytics"
+      ],
+      "webhookStatus": "unconfigured",
+      "deletionCallbackStatus": "not_applicable",
+      "lastHealthCheckAt": "2026-11-27T04:47:30.151Z",
+      "lastHealthStatus": "missing_credentials",
+      "lastDiagnosticMessage": "Set LINKEDIN_CLIENT_ID and LINKEDIN_CLIENT_SECRET to enable live OAuth.",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "x",
+      "provider": "x",
+      "displayName": "X / Twitter API v2 (OAuth 2.0 PKCE)",
+      "apiVersion": "v2",
+      "accessTier": "Basic / Pro Tier (Credit Budget Monitored)",
+      "approvalStatus": "sandbox_only",
+      "environmentFlags": {
+        "development": true,
+        "staging": true,
+        "production": false
+      },
+      "requestedScopes": [
+        "tweet.read",
+        "tweet.write",
+        "users.read",
+        "offline.access",
+        "media.write"
+      ],
+      "webhookStatus": "not_applicable",
+      "deletionCallbackStatus": "not_applicable",
+      "monthlyBudgetLimit": 10000,
+      "monthlyBudgetUsed": 414,
+      "lastHealthCheckAt": "2026-11-27T04:47:30.151Z",
+      "lastHealthStatus": "missing_credentials",
+      "lastDiagnosticMessage": "Set X_CLIENT_ID and X_CLIENT_SECRET to enable live OAuth 2.0 PKCE.",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "threads",
+      "provider": "threads",
+      "displayName": "Meta Threads API",
+      "apiVersion": "v1.0",
+      "accessTier": "Threads Use Case (Meta Developer Portal)",
+      "approvalStatus": "pending_review",
+      "environmentFlags": {
+        "development": true,
+        "staging": true,
+        "production": false
+      },
+      "requestedScopes": [
+        "threads_basic",
+        "threads_content_publish",
+        "threads_manage_insights",
+        "threads_manage_replies"
+      ],
+      "webhookStatus": "verified",
+      "deletionCallbackStatus": "verified",
+      "lastHealthCheckAt": "2026-11-27T04:47:30.151Z",
+      "lastHealthStatus": "missing_credentials",
+      "lastDiagnosticMessage": "Set THREADS_APP_ID and THREADS_APP_SECRET to enable live OAuth.",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "bluesky",
+      "provider": "bluesky",
+      "displayName": "Bluesky (AT Protocol OAuth / PDS)",
+      "apiVersion": "com.atproto / app.bsky",
+      "accessTier": "AT Protocol OAuth Client & Custom PDS",
+      "approvalStatus": "approved",
+      "environmentFlags": {
+        "development": true,
+        "staging": true,
+        "production": true
+      },
+      "requestedScopes": [
+        "atproto",
+        "transition:generic"
+      ],
+      "webhookStatus": "not_applicable",
+      "deletionCallbackStatus": "not_applicable",
+      "lastHealthCheckAt": "2026-11-27T04:47:30.151Z",
+      "lastHealthStatus": "connected",
+      "lastDiagnosticMessage": "AT Protocol OAuth client metadata and custom PDS discovery ready.",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "mastodon",
+      "provider": "mastodon",
+      "displayName": "Mastodon Federated Instances",
+      "apiVersion": "v1 / v2 REST",
+      "accessTier": "Dynamic Per-Instance OAuth Registration",
+      "approvalStatus": "approved",
+      "environmentFlags": {
+        "development": true,
+        "staging": true,
+        "production": true
+      },
+      "requestedScopes": [
+        "read:accounts",
+        "write:statuses",
+        "write:media"
+      ],
+      "webhookStatus": "not_applicable",
+      "deletionCallbackStatus": "not_applicable",
+      "lastHealthCheckAt": "2026-11-27T04:47:30.151Z",
+      "lastHealthStatus": "connected",
+      "lastDiagnosticMessage": "Instance discovery (/api/v2/instance) and status publishing active.",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "substack",
+      "provider": "substack",
+      "displayName": "Substack Notes (Assisted Export / Partner Gate)",
+      "apiVersion": "Assisted Export v1",
+      "accessTier": "Partner Access Pending (Saved Notes & Manual Open Ready)",
+      "approvalStatus": "partner_pending",
+      "environmentFlags": {
+        "development": true,
+        "staging": true,
+        "production": false
+      },
+      "requestedScopes": [
+        "notes:export"
+      ],
+      "webhookStatus": "not_applicable",
+      "deletionCallbackStatus": "not_applicable",
+      "lastHealthCheckAt": "2026-11-27T04:47:30.151Z",
+      "lastHealthStatus": "pending_review",
+      "lastDiagnosticMessage": "No public Substack Notes API exists; saved Notes variants, preview, and 1-click copy/open workflow active.",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    }
+  ],
+  "oauth_transactions": [
+    {
+      "_id": "otx_mwyi2mbr_Jv7p8mw3",
+      "state": "JMZB4jbU2Mw5NeNH0bA_OfV-WsK3Zc1j",
+      "userId": "usr_customer_01",
+      "sessionId": "ses_oauth_test",
+      "workspaceId": "ws_acme_growth",
+      "provider": "threads",
+      "intendedAction": "connect",
+      "redirectUri": "http://localhost:3000/api/integrations/threads/callback",
+      "expiresAt": "2026-11-27T04:57:30.183Z",
+      "createdAt": "2026-11-27T04:47:30.183Z",
+      "consumedAt": "2026-11-27T04:47:30.184Z"
+    },
+    {
+      "_id": "otx_mwyi2mbs_x3z4LUc5",
+      "state": "6XJ4A41OuWdmNl25sV_rHo3VTP3uaSYK",
+      "userId": "usr_customer_01",
+      "sessionId": "ses_oauth_test_2",
+      "workspaceId": "ws_acme_growth",
+      "provider": "threads",
+      "intendedAction": "connect",
+      "redirectUri": "http://localhost:3000/api/integrations/threads/callback",
+      "expiresAt": "2026-11-27T04:57:30.184Z",
+      "createdAt": "2026-11-27T04:47:30.184Z",
+      "consumedAt": "2026-11-27T04:47:30.184Z"
+    }
+  ],
+  "social_grants": [
+    {
+      "_id": "grt_sample_x_01",
+      "workspaceId": "ws_acme_growth",
+      "provider": "x",
+      "connectedByUserId": "usr_customer_01",
+      "encryptedAccessToken": {
+        "ciphertext": "8osxTisILaomKBAN7YVSfJaREFMBNNc6a8Q/",
+        "iv": "+FWfeoXzNpm3NAwm",
+        "authTag": "IwFqRGgBBzEsLPE9B5jnQw==",
+        "keyId": "v1",
+        "alg": "AES-256-GCM"
+      },
+      "encryptedRefreshToken": {
+        "ciphertext": "+DjzeuVT2TtNBZDc98rZbP7J9rLS/6l7v+7aUA==",
+        "iv": "qoL4Gvl+Hdfsxzaw",
+        "authTag": "fz1ad3L8aDHxx64QHnKqDw==",
+        "keyId": "v1",
+        "alg": "AES-256-GCM"
+      },
+      "grantedScopes": [
+        "tweet.read",
+        "tweet.write",
+        "users.read",
+        "offline.access",
+        "media.write"
+      ],
+      "tokenExpiresAt": "2026-12-04T04:47:30.151Z",
+      "status": "active",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "grt_sample_li_01",
+      "workspaceId": "ws_acme_growth",
+      "provider": "linkedin",
+      "connectedByUserId": "usr_customer_01",
+      "encryptedAccessToken": {
+        "ciphertext": "OnkTpD38LFgemIP7MVc1EZtdoNrlr+jskiE+Xg==",
+        "iv": "aoQw+BA2lO8gs8XK",
+        "authTag": "CNnn8RKz3sKQYo0HGSkVZQ==",
+        "keyId": "v1",
+        "alg": "AES-256-GCM"
+      },
+      "grantedScopes": [
+        "openid",
+        "profile",
+        "w_member_social",
+        "w_organization_social",
+        "r_organization_social"
+      ],
+      "tokenExpiresAt": "2027-01-21T04:47:30.151Z",
+      "status": "active",
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "grt_mwyi2mbs_7GViB-Z_",
+      "workspaceId": "ws_acme_growth",
+      "provider": "threads",
+      "connectedByUserId": "usr_customer_01",
+      "encryptedAccessToken": {
+        "ciphertext": "Kb65mHip+UA1hiiCZc411ikyHpMLiN5zu4ew6up6/uW9UKPj",
+        "iv": "TP9lJjoKLmQbwRDd",
+        "authTag": "j0hUECbdYcSbWDsewSwfgQ==",
+        "keyId": "v1",
+        "alg": "AES-256-GCM"
+      },
+      "encryptedRefreshToken": {
+        "ciphertext": "6vjWTZye6p+Z1hOPyEBvL1Z+NH6ffXa7rB1OHrtHagYLtljDtVo=",
+        "iv": "jZertmA8pxW7iuWn",
+        "authTag": "atQCTSzU5m1JUPI6ycJqSw==",
+        "keyId": "v1",
+        "alg": "AES-256-GCM"
+      },
+      "grantedScopes": [
+        "threads_basic",
+        "threads_content_publish",
+        "threads_manage_insights",
+        "threads_manage_replies"
+      ],
+      "tokenExpiresAt": "2027-01-26T04:47:30.184Z",
+      "status": "active",
+      "createdAt": "2026-11-27T04:47:30.184Z",
+      "updatedAt": "2026-11-27T04:47:30.184Z"
+    }
+  ],
+  "social_accounts": [
+    {
+      "_id": "acc_acme_x",
+      "workspaceId": "ws_acme_growth",
+      "grantId": "grt_sample_x_01",
+      "provider": "x",
+      "externalAccountId": "x_192837465",
+      "accountType": "profile",
+      "handle": "@acmestudio",
+      "displayName": "Acme Studio",
+      "capabilities": {
+        "canPublishText": true,
+        "canPublishImages": true,
+        "canPublishVideo": true,
+        "canPublishCarousel": false,
+        "canPublishReel": false,
+        "canPublishStory": false,
+        "canPublishDocument": false,
+        "canPublishPoll": true,
+        "canPublishThread": true,
+        "canPublishArticle": false,
+        "canQuote": true,
+        "canReply": true,
+        "canRepost": true,
+        "canReadInsights": true,
+        "maxCharacters": 280,
+        "maxMediaItems": 4
+      },
+      "healthState": "connected",
+      "lastVerifiedAt": "2026-11-27T04:47:30.151Z",
+      "groupIds": [
+        "grp_acme_core"
+      ],
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "acc_acme_linkedin",
+      "workspaceId": "ws_acme_growth",
+      "grantId": "grt_sample_li_01",
+      "provider": "linkedin",
+      "externalAccountId": "urn:li:organization:9841230",
+      "accountType": "organization",
+      "handle": "acme-studio-design",
+      "displayName": "Acme Studio (LinkedIn Page)",
+      "capabilities": {
+        "canPublishText": true,
+        "canPublishImages": true,
+        "canPublishVideo": true,
+        "canPublishCarousel": false,
+        "canPublishReel": false,
+        "canPublishStory": false,
+        "canPublishDocument": true,
+        "canPublishPoll": true,
+        "canPublishThread": false,
+        "canPublishArticle": false,
+        "canQuote": false,
+        "canReply": true,
+        "canRepost": true,
+        "canReadInsights": true,
+        "maxCharacters": 3000,
+        "maxMediaItems": 9
+      },
+      "healthState": "connected",
+      "lastVerifiedAt": "2026-11-27T04:47:30.151Z",
+      "groupIds": [
+        "grp_acme_core"
+      ],
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "acc_acme_substack",
+      "workspaceId": "ws_acme_growth",
+      "grantId": "grt_substack_manual",
+      "provider": "substack",
+      "externalAccountId": "substack_acmestudio",
+      "accountType": "notes",
+      "handle": "@acmestudio.substack.com",
+      "displayName": "Acme Studio Notes (Assisted Export)",
+      "capabilities": {
+        "canPublishText": true,
+        "canPublishImages": true,
+        "canPublishVideo": false,
+        "canPublishCarousel": false,
+        "canPublishReel": false,
+        "canPublishStory": false,
+        "canPublishDocument": false,
+        "canPublishPoll": false,
+        "canPublishThread": false,
+        "canPublishArticle": false,
+        "canQuote": false,
+        "canReply": false,
+        "canRepost": false,
+        "canReadInsights": false,
+        "maxCharacters": 5000,
+        "maxMediaItems": 4
+      },
+      "healthState": "pending_review",
+      "lastVerifiedAt": "2026-11-27T04:47:30.151Z",
+      "remediationGuide": "Partner API access is pending with Substack. Use the Composer Assisted Export to copy formatted Notes and open Substack Notes directly.",
+      "groupIds": [
+        "grp_acme_core"
+      ],
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "acc_mwyi2mbt_h5nOZa8",
+      "workspaceId": "ws_acme_growth",
+      "grantId": "grt_mwyi2mbs_7GViB-Z_",
+      "provider": "threads",
+      "externalAccountId": "threads_acme-studio_profile",
+      "accountType": "profile",
+      "handle": "@acme-studio",
+      "displayName": "Acme Studio Marketing (Meta Threads)",
+      "capabilities": {
+        "canPublishText": true,
+        "canPublishImages": true,
+        "canPublishVideo": true,
+        "canPublishCarousel": true,
+        "canPublishReel": false,
+        "canPublishStory": false,
+        "canPublishDocument": false,
+        "canPublishPoll": true,
+        "canPublishThread": true,
+        "canPublishArticle": false,
+        "canQuote": true,
+        "canReply": true,
+        "canRepost": true,
+        "canReadInsights": true,
+        "maxCharacters": 500,
+        "maxMediaItems": 10
+      },
+      "healthState": "connected",
+      "lastVerifiedAt": "2026-11-27T04:47:30.184Z",
+      "groupIds": [],
+      "createdAt": "2026-11-27T04:47:30.184Z",
+      "updatedAt": "2026-11-27T04:47:30.184Z"
+    }
+  ],
+  "drafts": [
+    {
+      "_id": "drf_sample_published_01",
+      "workspaceId": "ws_acme_growth",
+      "authorId": "usr_customer_01",
+      "title": "Q4 Design Workflow Architecture Thread",
+      "status": "published",
+      "version": 3,
+      "currentRevisionNumber": 3,
+      "tags": [
+        "Launch",
+        "Product",
+        "Thread"
+      ],
+      "campaign": "Q4 Workflow Launch",
+      "pinned": true,
+      "isTemplate": false,
+      "targetAccountIds": [
+        "acc_acme_x",
+        "acc_acme_linkedin"
+      ],
+      "masterSegments": [
+        {
+          "id": "seg_1",
+          "text": "1/ Social media works better when your ideas, content, and team move together in one shared calendar.",
+          "mediaIds": []
+        },
+        {
+          "id": "seg_2",
+          "text": "2/ Instead of scattered spreadsheets and lost approval threads, keep every revision, comment, and platform preview right beside the post.",
+          "mediaIds": []
+        }
+      ],
+      "platformVariants": {
+        "linkedin": {
+          "provider": "linkedin",
+          "enabled": true,
+          "segments": [
+            {
+              "id": "seg_li_1",
+              "text": "Social media works better when your ideas, content, and team move together.\n\nInstead of scattered spreadsheets and lost approval threads, keep every revision, comment, and platform preview right beside the post.",
+              "mediaIds": []
+            }
+          ]
+        }
+      },
+      "automations": [
+        {
+          "id": "auto_1",
+          "type": "first_comment",
+          "enabled": true,
+          "content": "Explore our full workflow guide at https://daoz360.ai/pricing"
+        }
+      ],
+      "assignedReviewerIds": [
+        "usr_reviewer_01"
+      ],
+      "approvedRevisionNumber": 3,
+      "approvedByUserId": "usr_reviewer_01",
+      "approvedAt": "2026-11-26T04:47:30.151Z",
+      "scheduledAtUtc": "2026-11-26T16:47:30.151Z",
+      "scheduledTimezone": "Asia/Kolkata",
+      "scheduleVersion": 1,
+      "publishedOnSocialPage": true,
+      "createdAt": "2026-11-25T04:47:30.151Z",
+      "updatedAt": "2026-11-26T16:47:30.151Z"
+    },
+    {
+      "_id": "drf_sample_review_02",
+      "workspaceId": "ws_acme_growth",
+      "authorId": "usr_editor_01",
+      "title": "Multi-Channel Agency Collaboration Checklist",
+      "status": "in_review",
+      "version": 2,
+      "currentRevisionNumber": 2,
+      "tags": [
+        "Agency",
+        "Checklist"
+      ],
+      "campaign": "Agency Playbook",
+      "pinned": false,
+      "isTemplate": false,
+      "targetAccountIds": [
+        "acc_acme_x",
+        "acc_acme_linkedin"
+      ],
+      "masterSegments": [
+        {
+          "id": "seg_rev_1",
+          "text": "How growing teams review and approve 40+ social accounts without bottlenecks: a 4-step checklist.",
+          "mediaIds": []
+        }
+      ],
+      "platformVariants": {},
+      "automations": [],
+      "assignedReviewerIds": [
+        "usr_reviewer_01"
+      ],
+      "clientReviewToken": "rev_tok_sample_acme_2026",
+      "clientReviewExpiresAt": "2026-12-04T04:47:30.151Z",
+      "scheduleVersion": 1,
+      "publishedOnSocialPage": false,
+      "createdAt": "2026-11-26T22:47:30.151Z",
+      "updatedAt": "2026-11-27T02:47:30.151Z"
+    },
+    {
+      "_id": "drf_sample_scheduled_03",
+      "workspaceId": "ws_acme_growth",
+      "authorId": "usr_customer_01",
+      "title": "Weekly Product Insights & Metrics Recap",
+      "status": "scheduled",
+      "version": 1,
+      "currentRevisionNumber": 1,
+      "tags": [
+        "Analytics",
+        "Weekly"
+      ],
+      "campaign": "Q4 Workflow Launch",
+      "pinned": false,
+      "isTemplate": false,
+      "targetAccountIds": [
+        "acc_acme_x"
+      ],
+      "masterSegments": [
+        {
+          "id": "seg_sched_1",
+          "text": "Let your next idea start with insight. Review real impressions, reach, and engagement patterns across your connected channels.",
+          "mediaIds": []
+        }
+      ],
+      "platformVariants": {},
+      "automations": [],
+      "assignedReviewerIds": [
+        "usr_reviewer_01"
+      ],
+      "approvedRevisionNumber": 1,
+      "approvedByUserId": "usr_reviewer_01",
+      "approvedAt": "2026-11-27T04:47:30.151Z",
+      "scheduledAtUtc": "2026-11-28T04:47:30.151Z",
+      "scheduledTimezone": "Asia/Kolkata",
+      "scheduleVersion": 1,
+      "publishedOnSocialPage": false,
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "drf_mwyi2mbt_HqYy-6u4",
+      "workspaceId": "ws_acme_growth",
+      "authorId": "usr_customer_01",
+      "title": "E2E Launch Thread (Edited)",
+      "status": "published",
+      "version": 2,
+      "currentRevisionNumber": 2,
+      "tags": [],
+      "pinned": false,
+      "isTemplate": false,
+      "targetAccountIds": [
+        "acc_acme_x"
+      ],
+      "masterSegments": [
+        {
+          "id": "s1",
+          "text": "1/ Launching DAOZ360 V2 multi-tenant publishing (updated copy).",
+          "mediaIds": []
+        },
+        {
+          "id": "s2",
+          "text": "2/ Built with durable MongoDB job queues and atomic fencing.",
+          "mediaIds": []
+        }
+      ],
+      "platformVariants": {},
+      "automations": [],
+      "assignedReviewerIds": [],
+      "scheduleVersion": 2,
+      "publishedOnSocialPage": false,
+      "createdAt": "2026-11-27T04:47:30.185Z",
+      "updatedAt": "2026-11-27T04:47:30.193Z",
+      "approvedRevisionNumber": 2,
+      "approvedByUserId": "usr_reviewer_01",
+      "approvedAt": "2026-11-27T04:47:30.188Z",
+      "scheduledAtUtc": "2026-11-27T04:47:30.189Z",
+      "scheduledTimezone": "Asia/Kolkata"
+    },
+    {
+      "_id": "drf_mwyi2mc2_UPirUVtj",
+      "workspaceId": "ws_acme_growth",
+      "authorId": "usr_customer_01",
+      "title": "Ambiguous Timeout Test",
+      "status": "published",
+      "version": 1,
+      "currentRevisionNumber": 1,
+      "tags": [],
+      "pinned": false,
+      "isTemplate": false,
+      "targetAccountIds": [
+        "acc_acme_x"
+      ],
+      "masterSegments": [
+        {
+          "id": "s1",
+          "text": "Testing socket timeout reconciliation",
+          "mediaIds": []
+        }
+      ],
+      "platformVariants": {},
+      "automations": [],
+      "assignedReviewerIds": [],
+      "scheduleVersion": 2,
+      "publishedOnSocialPage": false,
+      "createdAt": "2026-11-27T04:47:30.194Z",
+      "updatedAt": "2026-11-27T04:47:30.206Z",
+      "approvedRevisionNumber": 1,
+      "approvedByUserId": "usr_reviewer_01",
+      "approvedAt": "2026-11-27T04:47:30.195Z",
+      "scheduledAtUtc": "2026-11-27T04:47:30.202Z",
+      "scheduledTimezone": "UTC"
+    }
+  ],
+  "draft_revisions": [
+    {
+      "_id": "rev_sample_01",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_sample_published_01",
+      "revisionNumber": 3,
+      "authorId": "usr_customer_01",
+      "snapshot": {
+        "title": "Q4 Design Workflow Architecture Thread",
+        "masterSegments": [
+          {
+            "id": "seg_1",
+            "text": "1/ Social media works better when your ideas, content, and team move together in one shared calendar.",
+            "mediaIds": []
+          },
+          {
+            "id": "seg_2",
+            "text": "2/ Instead of scattered spreadsheets and lost approval threads, keep every revision, comment, and platform preview right beside the post.",
+            "mediaIds": []
+          }
+        ],
+        "platformVariants": {
+          "linkedin": {
+            "provider": "linkedin",
+            "enabled": true,
+            "segments": [
+              {
+                "id": "seg_li_1",
+                "text": "Social media works better when your ideas, content, and team move together.\n\nInstead of scattered spreadsheets and lost approval threads, keep every revision, comment, and platform preview right beside the post.",
+                "mediaIds": []
+              }
+            ]
+          }
+        },
+        "targetAccountIds": [
+          "acc_acme_x",
+          "acc_acme_linkedin"
+        ],
+        "automations": [
+          {
+            "id": "auto_1",
+            "type": "first_comment",
+            "enabled": true,
+            "content": "Explore our full workflow guide at https://daoz360.ai/pricing"
+          }
+        ]
+      },
+      "changeSummary": "Final approved thread revision for publication",
+      "isImmutablePublication": true,
+      "createdAt": "2026-11-26T04:47:30.151Z"
+    },
+    {
+      "_id": "rev_mwyi2mbt_lD4r2AaF",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_mwyi2mbt_HqYy-6u4",
+      "revisionNumber": 1,
+      "authorId": "usr_customer_01",
+      "snapshot": {
+        "title": "E2E Launch Thread",
+        "masterSegments": [
+          {
+            "id": "s1",
+            "text": "1/ Launching DAOZ360 V2 multi-tenant publishing.",
+            "mediaIds": []
+          },
+          {
+            "id": "s2",
+            "text": "2/ Built with durable MongoDB job queues and atomic fencing.",
+            "mediaIds": []
+          }
+        ],
+        "platformVariants": {},
+        "targetAccountIds": [
+          "acc_acme_x"
+        ],
+        "automations": []
+      },
+      "changeSummary": "Initial draft created",
+      "isImmutablePublication": false,
+      "createdAt": "2026-11-27T04:47:30.185Z"
+    },
+    {
+      "_id": "rev_mwyi2mbw_heDlL-U4",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_mwyi2mbt_HqYy-6u4",
+      "revisionNumber": 2,
+      "authorId": "usr_customer_01",
+      "snapshot": {
+        "title": "E2E Launch Thread (Edited)",
+        "masterSegments": [
+          {
+            "id": "s1",
+            "text": "1/ Launching DAOZ360 V2 multi-tenant publishing (updated copy).",
+            "mediaIds": []
+          },
+          {
+            "id": "s2",
+            "text": "2/ Built with durable MongoDB job queues and atomic fencing.",
+            "mediaIds": []
+          }
+        ],
+        "platformVariants": {},
+        "targetAccountIds": [
+          "acc_acme_x"
+        ],
+        "automations": []
+      },
+      "changeSummary": "Revision #2",
+      "isImmutablePublication": true,
+      "createdAt": "2026-11-27T04:47:30.187Z"
+    },
+    {
+      "_id": "rev_mwyi2mc2_UPWlwZ-r",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_mwyi2mc2_UPirUVtj",
+      "revisionNumber": 1,
+      "authorId": "usr_customer_01",
+      "snapshot": {
+        "title": "Ambiguous Timeout Test",
+        "masterSegments": [
+          {
+            "id": "s1",
+            "text": "Testing socket timeout reconciliation",
+            "mediaIds": []
+          }
+        ],
+        "platformVariants": {},
+        "targetAccountIds": [
+          "acc_acme_x"
+        ],
+        "automations": []
+      },
+      "changeSummary": "Initial draft created",
+      "isImmutablePublication": true,
+      "createdAt": "2026-11-27T04:47:30.194Z"
+    }
+  ],
+  "delivery_targets": [
+    {
+      "_id": "del_target_01",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_sample_published_01",
+      "revisionNumber": 3,
+      "accountId": "acc_acme_x",
+      "provider": "x",
+      "status": "published",
+      "scheduledAtUtc": "2026-11-26T16:47:30.151Z",
+      "displayTimezone": "Asia/Kolkata",
+      "scheduleVersion": 1,
+      "idempotencyKey": "idem_drf_sample_published_01_r3_acc_acme_x",
+      "segmentDeliveries": [
+        {
+          "segmentIndex": 0,
+          "segmentId": "seg_1",
+          "idempotencyKey": "idem_drf_sample_published_01_r3_acc_acme_x_s0",
+          "status": "published",
+          "remotePostId": "18619001001",
+          "remoteUrl": "https://x.com/acmestudio/status/18619001001",
+          "publishedAt": "2026-11-26T16:47:30.151Z"
+        },
+        {
+          "segmentIndex": 1,
+          "segmentId": "seg_2",
+          "idempotencyKey": "idem_drf_sample_published_01_r3_acc_acme_x_s1",
+          "status": "published",
+          "remotePostId": "18619001002",
+          "remoteUrl": "https://x.com/acmestudio/status/18619001002",
+          "publishedAt": "2026-11-26T16:47:30.151Z"
+        }
+      ],
+      "retryCount": 0,
+      "createdAt": "2026-11-26T16:47:30.151Z",
+      "updatedAt": "2026-11-26T16:47:30.151Z"
+    },
+    {
+      "_id": "del_target_02",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_sample_published_01",
+      "revisionNumber": 3,
+      "accountId": "acc_acme_linkedin",
+      "provider": "linkedin",
+      "status": "published",
+      "scheduledAtUtc": "2026-11-26T16:47:30.151Z",
+      "displayTimezone": "Asia/Kolkata",
+      "scheduleVersion": 1,
+      "idempotencyKey": "idem_drf_sample_published_01_r3_acc_acme_linkedin",
+      "segmentDeliveries": [
+        {
+          "segmentIndex": 0,
+          "segmentId": "seg_li_1",
+          "idempotencyKey": "idem_drf_sample_published_01_r3_acc_acme_linkedin_s0",
+          "status": "published",
+          "remotePostId": "urn:li:share:72670019283",
+          "remoteUrl": "https://www.linkedin.com/feed/update/urn:li:share:72670019283",
+          "publishedAt": "2026-11-26T16:47:30.151Z"
+        }
+      ],
+      "retryCount": 0,
+      "createdAt": "2026-11-26T16:47:30.151Z",
+      "updatedAt": "2026-11-26T16:47:30.151Z"
+    },
+    {
+      "_id": "del_target_03",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_sample_scheduled_03",
+      "revisionNumber": 1,
+      "accountId": "acc_acme_x",
+      "provider": "x",
+      "status": "queued",
+      "scheduledAtUtc": "2026-11-28T04:47:30.151Z",
+      "displayTimezone": "Asia/Kolkata",
+      "scheduleVersion": 1,
+      "idempotencyKey": "idem_drf_sample_scheduled_03_r1_acc_acme_x",
+      "segmentDeliveries": [
+        {
+          "segmentIndex": 0,
+          "segmentId": "seg_sched_1",
+          "idempotencyKey": "idem_drf_sample_scheduled_03_r1_acc_acme_x_s0",
+          "status": "pending"
+        }
+      ],
+      "retryCount": 0,
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "del_mwyi2mbx_shEwl4E",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_mwyi2mbt_HqYy-6u4",
+      "revisionNumber": 2,
+      "accountId": "acc_acme_x",
+      "provider": "x",
+      "status": "published",
+      "scheduledAtUtc": "2026-11-27T04:47:30.189Z",
+      "displayTimezone": "Asia/Kolkata",
+      "scheduleVersion": 2,
+      "idempotencyKey": "idem_drf_mwyi2mbt_HqYy-6u4_r2_v2_acc_acme_x",
+      "segmentDeliveries": [
+        {
+          "segmentIndex": 0,
+          "segmentId": "s1",
+          "idempotencyKey": "idem_drf_mwyi2mbt_HqYy-6u4_r2_v2_acc_acme_x_s0",
+          "status": "published",
+          "remotePostId": "x_post_6964656d5f64",
+          "remoteUrl": "https://x.com/acmestudio/status/x_post_6964656d5f64",
+          "publishedAt": "2026-11-27T04:47:30.192Z"
+        },
+        {
+          "segmentIndex": 1,
+          "segmentId": "s2",
+          "idempotencyKey": "idem_drf_mwyi2mbt_HqYy-6u4_r2_v2_acc_acme_x_s1",
+          "status": "published",
+          "remotePostId": "x_post_6964656d5f64",
+          "remoteUrl": "https://x.com/acmestudio/status/x_post_6964656d5f64",
+          "publishedAt": "2026-11-27T04:47:30.192Z"
+        }
+      ],
+      "retryCount": 0,
+      "createdAt": "2026-11-27T04:47:30.189Z",
+      "updatedAt": "2026-11-27T04:47:30.193Z",
+      "publishedAt": "2026-11-27T04:47:30.193Z"
+    },
+    {
+      "_id": "del_mwyi2mcb_oP7VzSE",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_mwyi2mc2_UPirUVtj",
+      "revisionNumber": 1,
+      "accountId": "acc_acme_x",
+      "provider": "x",
+      "status": "published",
+      "scheduledAtUtc": "2026-11-27T04:47:30.202Z",
+      "displayTimezone": "UTC",
+      "scheduleVersion": 2,
+      "idempotencyKey": "idem_drf_mwyi2mc2_UPirUVtj_r1_v2_acc_acme_x",
+      "segmentDeliveries": [
+        {
+          "segmentIndex": 0,
+          "segmentId": "s1",
+          "idempotencyKey": "idem_drf_mwyi2mc2_UPirUVtj_r1_v2_acc_acme_x_s0",
+          "status": "published",
+          "remotePostId": "x_post_6964656d5f64",
+          "remoteUrl": "https://x.com/status/x_post_6964656d5f64",
+          "publishedAt": "2026-11-27T04:47:30.206Z"
+        }
+      ],
+      "retryCount": 0,
+      "createdAt": "2026-11-27T04:47:30.202Z",
+      "updatedAt": "2026-11-27T04:47:30.206Z",
+      "publishedAt": "2026-11-27T04:47:30.206Z"
+    }
+  ],
+  "jobs": [
+    {
+      "_id": "job_sample_01",
+      "workspaceId": "ws_acme_growth",
+      "type": "publish_target",
+      "targetId": "del_target_01",
+      "draftId": "drf_sample_published_01",
+      "revisionNumber": 3,
+      "scheduleVersion": 1,
+      "idempotencyKey": "job_idem_del_target_01",
+      "status": "completed",
+      "dueAt": "2026-11-26T16:47:30.151Z",
+      "fencingToken": 1,
+      "attempts": 1,
+      "maxAttempts": 5,
+      "createdAt": "2026-11-26T16:47:30.151Z",
+      "updatedAt": "2026-11-26T16:47:30.151Z"
+    },
+    {
+      "_id": "job_sample_02",
+      "workspaceId": "ws_acme_growth",
+      "type": "publish_target",
+      "targetId": "del_target_03",
+      "draftId": "drf_sample_scheduled_03",
+      "revisionNumber": 1,
+      "scheduleVersion": 1,
+      "idempotencyKey": "job_idem_del_target_03",
+      "status": "queued",
+      "dueAt": "2026-11-28T04:47:30.151Z",
+      "fencingToken": 1,
+      "attempts": 0,
+      "maxAttempts": 5,
+      "createdAt": "2026-11-27T04:47:30.151Z",
+      "updatedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "job_mwyi2mby_0fJ47zw",
+      "workspaceId": "ws_acme_growth",
+      "type": "publish_target",
+      "targetId": "del_mwyi2mbx_shEwl4E",
+      "draftId": "drf_mwyi2mbt_HqYy-6u4",
+      "accountId": "acc_acme_x",
+      "revisionNumber": 2,
+      "scheduleVersion": 2,
+      "idempotencyKey": "job_idem_drf_mwyi2mbt_HqYy-6u4_r2_v2_acc_acme_x",
+      "status": "completed",
+      "dueAt": "2026-11-27T04:47:30.189Z",
+      "fencingToken": 2,
+      "attempts": 1,
+      "maxAttempts": 5,
+      "createdAt": "2026-11-27T04:47:30.189Z",
+      "updatedAt": "2026-11-27T04:47:30.193Z",
+      "claimedByWorkerId": "web-inline-dispatcher",
+      "claimedAt": "2026-11-27T04:47:30.191Z",
+      "leaseExpiresAt": "2026-11-27T04:48:30.191Z"
+    },
+    {
+      "_id": "job_mwyi2mcb_dxJTrYY",
+      "workspaceId": "ws_acme_growth",
+      "type": "publish_target",
+      "targetId": "del_mwyi2mcb_oP7VzSE",
+      "draftId": "drf_mwyi2mc2_UPirUVtj",
+      "accountId": "acc_acme_x",
+      "revisionNumber": 1,
+      "scheduleVersion": 2,
+      "idempotencyKey": "job_idem_drf_mwyi2mc2_UPirUVtj_r1_v2_acc_acme_x",
+      "status": "failed",
+      "dueAt": "2026-11-27T04:47:30.202Z",
+      "fencingToken": 2,
+      "attempts": 1,
+      "maxAttempts": 5,
+      "createdAt": "2026-11-27T04:47:30.202Z",
+      "updatedAt": "2026-11-27T04:47:30.205Z",
+      "claimedByWorkerId": "test-worker-amb",
+      "claimedAt": "2026-11-27T04:47:30.204Z",
+      "leaseExpiresAt": "2026-11-27T04:48:30.204Z",
+      "lastError": "Upstream provider socket timed out after payload dispatch; reconciliation required."
+    }
+  ],
+  "publish_attempts": [
+    {
+      "_id": "att_sample_01",
+      "workspaceId": "ws_acme_growth",
+      "jobId": "job_sample_01",
+      "targetId": "del_target_01",
+      "accountId": "acc_acme_x",
+      "provider": "x",
+      "attemptNumber": 1,
+      "fencingToken": 1,
+      "status": "success",
+      "httpStatus": 201,
+      "remoteIds": [
+        "18619001001",
+        "18619001002"
+      ],
+      "durationMs": 380,
+      "createdAt": "2026-11-26T16:47:30.151Z"
+    },
+    {
+      "_id": "att_mwyi2mc0_UeyYHWE",
+      "workspaceId": "ws_acme_growth",
+      "jobId": "job_mwyi2mby_0fJ47zw",
+      "targetId": "del_mwyi2mbx_shEwl4E",
+      "accountId": "acc_acme_x",
+      "provider": "x",
+      "attemptNumber": 1,
+      "fencingToken": 2,
+      "status": "success",
+      "httpStatus": 201,
+      "remoteIds": [
+        "x_post_6964656d5f64",
+        "x_post_6964656d5f64"
+      ],
+      "durationMs": 1,
+      "createdAt": "2026-11-27T04:47:30.192Z"
+    },
+    {
+      "_id": "att_mwyi2mcd_oykpOcU",
+      "workspaceId": "ws_acme_growth",
+      "jobId": "job_mwyi2mcb_dxJTrYY",
+      "targetId": "del_mwyi2mcb_oP7VzSE",
+      "accountId": "acc_acme_x",
+      "provider": "x",
+      "attemptNumber": 1,
+      "fencingToken": 2,
+      "status": "timeout_ambiguous",
+      "httpStatus": 504,
+      "sanitizedError": "Upstream provider socket timed out after payload dispatch; reconciliation required.",
+      "remoteIds": [],
+      "durationMs": 0,
+      "createdAt": "2026-11-27T04:47:30.205Z"
+    }
+  ],
+  "media": [],
+  "comments": [
+    {
+      "_id": "cmt_sample_01",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_sample_review_02",
+      "revisionNumber": 2,
+      "authorId": "usr_reviewer_01",
+      "authorName": "Liam Patel",
+      "body": "@maya Could we tighten the opening hook so it fits cleanly above the fold on LinkedIn?",
+      "mentions": [
+        "maya"
+      ],
+      "resolved": false,
+      "createdAt": "2026-11-27T03:47:30.151Z"
+    }
+  ],
+  "approvals": [
+    {
+      "_id": "apr_sample_01",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_sample_published_01",
+      "revisionNumber": 3,
+      "reviewerId": "usr_reviewer_01",
+      "reviewerName": "Liam Patel",
+      "decision": "approved",
+      "note": "Verified thread copy and LinkedIn variant.",
+      "createdAt": "2026-11-26T04:47:30.151Z"
+    },
+    {
+      "_id": "apr_mwyi2mbu_rVMf4Kje",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_mwyi2mbt_HqYy-6u4",
+      "revisionNumber": 1,
+      "reviewerId": "usr_reviewer_01",
+      "reviewerName": "Liam Patel",
+      "decision": "invalidated",
+      "note": "LGTM for launch",
+      "createdAt": "2026-11-27T04:47:30.186Z",
+      "invalidatedReason": "Edited by Alex Morgan in revision 2",
+      "invalidatedAt": "2026-11-27T04:47:30.187Z"
+    },
+    {
+      "_id": "apr_mwyi2mbw_MZal098P",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_mwyi2mbt_HqYy-6u4",
+      "revisionNumber": 2,
+      "reviewerId": "usr_reviewer_01",
+      "reviewerName": "Liam Patel",
+      "decision": "approved",
+      "note": "Re-approved revision #2",
+      "createdAt": "2026-11-27T04:47:30.188Z"
+    },
+    {
+      "_id": "apr_mwyi2mc3_VhesxVT2",
+      "workspaceId": "ws_acme_growth",
+      "draftId": "drf_mwyi2mc2_UPirUVtj",
+      "revisionNumber": 1,
+      "reviewerId": "usr_reviewer_01",
+      "reviewerName": "Liam Patel",
+      "decision": "approved",
+      "createdAt": "2026-11-27T04:47:30.195Z"
+    }
+  ],
+  "calendar_slots": [
+    {
+      "_id": "slot_mon_0930",
+      "workspaceId": "ws_acme_growth",
+      "dayOfWeek": 1,
+      "time24h": "09:30",
+      "timezone": "Asia/Kolkata",
+      "accountGroupIds": [
+        "grp_acme_core"
+      ],
+      "label": "Morning Thought Leadership",
+      "enabled": true,
+      "createdAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "slot_wed_1400",
+      "workspaceId": "ws_acme_growth",
+      "dayOfWeek": 3,
+      "time24h": "14:00",
+      "timezone": "Asia/Kolkata",
+      "accountGroupIds": [
+        "grp_acme_core"
+      ],
+      "label": "Mid-Week Thread Slot",
+      "enabled": true,
+      "createdAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "slot_fri_1630",
+      "workspaceId": "ws_acme_growth",
+      "dayOfWeek": 5,
+      "time24h": "16:30",
+      "timezone": "Asia/Kolkata",
+      "accountGroupIds": [
+        "grp_acme_core"
+      ],
+      "label": "Friday Insights Recap",
+      "enabled": true,
+      "createdAt": "2026-11-27T04:47:30.151Z"
+    }
+  ],
+  "metric_snapshots": [
+    {
+      "_id": "met_x_post_01",
+      "workspaceId": "ws_acme_growth",
+      "accountId": "acc_acme_x",
+      "provider": "x",
+      "entityType": "post",
+      "entityId": "18619001001",
+      "draftId": "drf_sample_published_01",
+      "metricWindow": "lifetime",
+      "dateKey": "2026-11-27",
+      "metrics": {
+        "impressions": 14820,
+        "reach": null,
+        "views": 14820,
+        "engagements": 942,
+        "reactions": 618,
+        "comments": 64,
+        "reposts": 128,
+        "saves": 132,
+        "clicks": 310,
+        "followerCount": 8420,
+        "followerChange": 38
+      },
+      "nativeMetrics": {
+        "impression_count": 14820,
+        "like_count": 618,
+        "reply_count": 64,
+        "retweet_count": 128,
+        "bookmark_count": 132,
+        "url_link_clicks": 310
+      },
+      "engagementRateFormula": "(reactions + comments + reposts + saves + clicks) / impressions * 100",
+      "engagementRateDenominator": "impressions",
+      "engagementRatePercent": 8.45,
+      "coverageStatus": "verified",
+      "syncedAt": "2026-11-27T04:47:30.151Z"
+    },
+    {
+      "_id": "met_li_post_01",
+      "workspaceId": "ws_acme_growth",
+      "accountId": "acc_acme_linkedin",
+      "provider": "linkedin",
+      "entityType": "post",
+      "entityId": "urn:li:share:72670019283",
+      "draftId": "drf_sample_published_01",
+      "metricWindow": "lifetime",
+      "dateKey": "2026-11-27",
+      "metrics": {
+        "impressions": 9640,
+        "reach": 6210,
+        "views": null,
+        "engagements": 615,
+        "reactions": 412,
+        "comments": 53,
+        "reposts": 38,
+        "saves": null,
+        "clicks": 112,
+        "followerCount": 12350,
+        "followerChange": 64
+      },
+      "nativeMetrics": {
+        "impressionCount": 9640,
+        "uniqueImpressionsCount": 6210,
+        "likeCount": 412,
+        "commentCount": 53,
+        "shareCount": 38,
+        "clickCount": 112
+      },
+      "engagementRateFormula": "(reactions + comments + reposts + clicks) / impressions * 100",
+      "engagementRateDenominator": "impressions",
+      "engagementRatePercent": 6.38,
+      "coverageStatus": "verified",
+      "syncedAt": "2026-11-27T04:47:30.151Z"
+    }
+  ],
+  "notifications": [
+    {
+      "_id": "ntf_sample_01",
+      "workspaceId": "ws_acme_growth",
+      "userId": "usr_customer_01",
+      "type": "approval_requested",
+      "title": "Draft awaiting review",
+      "message": "Maya Lin requested review on \"Multi-Channel Agency Collaboration Checklist\".",
+      "linkUrl": "/dashboard?tab=composer&draftId=drf_sample_review_02",
+      "createdAt": "2026-11-27T02:47:30.151Z"
+    },
+    {
+      "_id": "ntf_mwyi2mbu_WQiSvyiN",
+      "workspaceId": "ws_acme_growth",
+      "userId": "usr_customer_01",
+      "type": "approved",
+      "title": "Draft Approved",
+      "message": "Liam Patel approved \"E2E Launch Thread\" (Revision #1).",
+      "linkUrl": "/dashboard?tab=composer&draftId=drf_mwyi2mbt_HqYy-6u4",
+      "createdAt": "2026-11-27T04:47:30.186Z"
+    },
+    {
+      "_id": "ntf_mwyi2mbw_nv2l9Pjq",
+      "workspaceId": "ws_acme_growth",
+      "userId": "usr_customer_01",
+      "type": "approved",
+      "title": "Draft Approved",
+      "message": "Liam Patel approved \"E2E Launch Thread (Edited)\" (Revision #2).",
+      "linkUrl": "/dashboard?tab=composer&draftId=drf_mwyi2mbt_HqYy-6u4",
+      "createdAt": "2026-11-27T04:47:30.188Z"
+    },
+    {
+      "_id": "ntf_mwyi2mc4_NQa_zqUD",
+      "workspaceId": "ws_acme_growth",
+      "userId": "usr_customer_01",
+      "type": "approved",
+      "title": "Draft Approved",
+      "message": "Liam Patel approved \"Ambiguous Timeout Test\" (Revision #1).",
+      "linkUrl": "/dashboard?tab=composer&draftId=drf_mwyi2mc2_UPirUVtj",
+      "createdAt": "2026-11-27T04:47:30.195Z"
+    }
+  ],
+  "integration_keys": [],
+  "inquiries": [
+    {
+      "_id": "inq_seed_01",
+      "reference": "DAOZ-INQ-261127-4821",
+      "idempotencyKey": "DAOZ-INQ-261127-4821",
+      "kind": "contact_inquiry",
+      "name": "Priya Nair",
+      "email": "priya@horizonmedia.in",
+      "company": "Horizon Media Labs",
+      "channels": "Instagram, LinkedIn, X",
+      "category": "Pricing & Package Enquiry",
+      "plan": "Growth",
+      "billing": "Yearly (Save 2 months)",
+      "currency": "INR",
+      "message": "We manage 12 client channels with 3 editors and would like to onboard onto the Growth yearly plan.",
+      "status": "New",
+      "ownerUserId": "usr_opsadmin_01",
+      "ownerName": "Operations Admin",
+      "createdAt": "2026-11-27T01:47:30.151Z",
+      "updatedAt": "2026-11-27T01:47:30.151Z"
+    },
+    {
+      "_id": "inq_mwyi2mbc_NY7C3uOf",
+      "reference": "DAOZ-INQ-261127-3008",
+      "idempotencyKey": "test_idem_1795754850150",
+      "kind": "contact_inquiry",
+      "name": "Rohan Sharma",
+      "email": "rohan@agency.in",
+      "company": "Apex Digital",
+      "category": "Pricing & Package Enquiry",
+      "plan": "Growth",
+      "message": "We manage 14 social channels and want to start on Growth.",
+      "status": "New",
+      "ipAddress": "127.0.0.1",
+      "createdAt": "2026-11-27T04:47:30.168Z",
+      "updatedAt": "2026-11-27T04:47:30.168Z"
+    },
+    {
+      "_id": "inq_lead_mwyi2mbc_pysGww",
+      "reference": "LEAD_MWYI2MBC_PYSGWW",
+      "idempotencyKey": "lead_ses_mwyi2mbc_MOblGp-c",
+      "kind": "chat_lead",
+      "sessionId": "ses_mwyi2mbc_MOblGp-c",
+      "leadId": "lead_mwyi2mbc_pysGww",
+      "name": "Elena Rostova",
+      "email": "elena@studio.io",
+      "company": "Studio E",
+      "category": "Chat Pre-Chat Lead",
+      "message": "Started automated chat session (ses_mwyi2mbc_MOblGp-c)",
+      "status": "New",
+      "createdAt": "2026-11-27T04:47:30.168Z",
+      "updatedAt": "2026-11-27T04:47:30.168Z"
+    },
+    {
+      "_id": "inq_mwyi2mbe_ZOwOcoq3",
+      "reference": "DAOZ-DMO-261127-7812",
+      "idempotencyKey": "chat_idem_1795754850169",
+      "kind": "chat_request",
+      "sessionId": "ses_mwyi2mbc_MOblGp-c",
+      "name": "Elena Rostova",
+      "email": "elena@studio.io",
+      "category": "Chat Request (demo)",
+      "topic": "demo",
+      "message": "{\"demoFocus\":\"Team Approval Workflow\"}",
+      "details": {
+        "demoFocus": "Team Approval Workflow"
+      },
+      "status": "New",
+      "createdAt": "2026-11-27T04:47:30.170Z",
+      "updatedAt": "2026-11-27T04:47:30.170Z"
+    }
+  ],
+  "chat_messages": [
+    {
+      "_id": "cmsg_mwyi2mbd_PFN7PeMv",
+      "sessionId": "ses_mwyi2mbc_MOblGp-c",
+      "sender": "user",
+      "message": "What are your pricing plans?",
+      "currency": "USD",
+      "createdAt": "2026-11-27T04:47:30.169Z"
+    }
+  ],
+  "audit_events": [
+    {
+      "_id": "aud_seed_01",
+      "workspaceId": "ws_acme_growth",
+      "actorUserId": "usr_reviewer_01",
+      "actorEmail": "liam@acmestudio.io",
+      "actorRole": "publisher",
+      "action": "draft.approved",
+      "targetType": "draft",
+      "targetId": "drf_sample_published_01",
+      "metadata": {
+        "revisionNumber": 3,
+        "decision": "approved"
+      },
+      "createdAt": "2026-11-26T04:47:30.151Z"
+    },
+    {
+      "_id": "aud_seed_02",
+      "workspaceId": "ws_acme_growth",
+      "actorUserId": "usr_customer_01",
+      "actorEmail": "alex@acmestudio.io",
+      "actorRole": "owner",
+      "action": "oauth.account_connected",
+      "targetType": "social_account",
+      "targetId": "acc_acme_x",
+      "metadata": {
+        "provider": "x",
+        "handle": "@acmestudio"
+      },
+      "createdAt": "2026-11-25T04:47:30.151Z"
+    },
+    {
+      "_id": "aud_mwyi2mbm_o72xUSrL",
+      "workspaceId": "ws_daoz360_admin",
+      "actorUserId": "usr_superadmin_01",
+      "actorEmail": "admin@daoz360.ai",
+      "actorRole": "super_admin",
+      "action": "auth.sign_in",
+      "targetType": "session",
+      "targetId": "ses_mwyi2mbm_ESEDeBJgRmk8ITKs",
+      "metadata": {
+        "mfaVerified": true
+      },
+      "createdAt": "2026-11-27T04:47:30.178Z"
+    },
+    {
+      "_id": "aud_mwyi2mbr_Oe6HHVjW",
+      "workspaceId": "ws_mwyi2mbn_H5rt2tGV",
+      "actorUserId": "usr_mwyi2mbn_H08h6bIi",
+      "actorEmail": "founder_1795754850179@test.io",
+      "actorRole": "owner",
+      "action": "workspace.created",
+      "targetType": "workspace",
+      "targetId": "ws_mwyi2mbn_H5rt2tGV",
+      "metadata": {
+        "planId": "growth",
+        "slug": "founder-brand-2mbn"
+      },
+      "createdAt": "2026-11-27T04:47:30.183Z"
+    },
+    {
+      "_id": "aud_mwyi2mbt_06uzLiXp",
+      "workspaceId": "ws_acme_growth",
+      "actorUserId": "usr_customer_01",
+      "action": "oauth.connection_completed",
+      "targetType": "social_grant",
+      "targetId": "grt_mwyi2mbs_7GViB-Z_",
+      "metadata": {
+        "provider": "threads",
+        "accountsConnected": [
+          "acc_mwyi2mbt_h5nOZa8"
+        ],
+        "scopes": [
+          "threads_basic",
+          "threads_content_publish",
+          "threads_manage_insights",
+          "threads_manage_replies"
+        ]
+      },
+      "createdAt": "2026-11-27T04:47:30.185Z"
+    },
+    {
+      "_id": "aud_mwyi2mbv_JRTLFbun",
+      "workspaceId": "ws_acme_growth",
+      "actorUserId": "usr_reviewer_01",
+      "actorEmail": "liam@acmestudio.io",
+      "actorRole": "publisher",
+      "action": "draft.approved",
+      "targetType": "draft",
+      "targetId": "drf_mwyi2mbt_HqYy-6u4",
+      "metadata": {
+        "revisionNumber": 1,
+        "note": "LGTM for launch"
+      },
+      "createdAt": "2026-11-27T04:47:30.187Z"
+    },
+    {
+      "_id": "aud_mwyi2mbv_5P22fr81",
+      "workspaceId": "ws_acme_growth",
+      "actorUserId": "usr_customer_01",
+      "actorEmail": "alex@acmestudio.io",
+      "actorRole": "owner",
+      "action": "approval.invalidated_on_edit",
+      "targetType": "draft",
+      "targetId": "drf_mwyi2mbt_HqYy-6u4",
+      "metadata": {
+        "previousApprovedRevision": 1,
+        "newRevision": 2
+      },
+      "createdAt": "2026-11-27T04:47:30.187Z"
+    },
+    {
+      "_id": "aud_mwyi2mbx_HpiVZ-sd",
+      "workspaceId": "ws_acme_growth",
+      "actorUserId": "usr_reviewer_01",
+      "actorEmail": "liam@acmestudio.io",
+      "actorRole": "publisher",
+      "action": "draft.approved",
+      "targetType": "draft",
+      "targetId": "drf_mwyi2mbt_HqYy-6u4",
+      "metadata": {
+        "revisionNumber": 2,
+        "note": "Re-approved revision #2"
+      },
+      "createdAt": "2026-11-27T04:47:30.189Z"
+    },
+    {
+      "_id": "aud_mwyi2mby__qd3hIts",
+      "workspaceId": "ws_acme_growth",
+      "actorUserId": "usr_customer_01",
+      "actorEmail": "alex@acmestudio.io",
+      "actorRole": "owner",
+      "action": "draft.publish_now_queued",
+      "targetType": "draft",
+      "targetId": "drf_mwyi2mbt_HqYy-6u4",
+      "metadata": {
+        "revisionNumber": 2,
+        "scheduleVersion": 2,
+        "dueAt": "2026-11-27T04:47:30.189Z",
+        "displayTimezone": "Asia/Kolkata",
+        "targets": [
+          "del_mwyi2mbx_shEwl4E"
+        ]
+      },
+      "createdAt": "2026-11-27T04:47:30.190Z"
+    },
+    {
+      "_id": "aud_mwyi2mca_VAoOuHBx",
+      "workspaceId": "ws_acme_growth",
+      "actorUserId": "usr_reviewer_01",
+      "actorEmail": "liam@acmestudio.io",
+      "actorRole": "publisher",
+      "action": "draft.approved",
+      "targetType": "draft",
+      "targetId": "drf_mwyi2mc2_UPirUVtj",
+      "metadata": {
+        "revisionNumber": 1
+      },
+      "createdAt": "2026-11-27T04:47:30.202Z"
+    },
+    {
+      "_id": "aud_mwyi2mcc_Y_wHc3hh",
+      "workspaceId": "ws_acme_growth",
+      "actorUserId": "usr_customer_01",
+      "actorEmail": "alex@acmestudio.io",
+      "actorRole": "owner",
+      "action": "draft.scheduled",
+      "targetType": "draft",
+      "targetId": "drf_mwyi2mc2_UPirUVtj",
+      "metadata": {
+        "revisionNumber": 1,
+        "scheduleVersion": 2,
+        "dueAt": "2026-11-27T04:47:30.202Z",
+        "displayTimezone": "UTC",
+        "targets": [
+          "del_mwyi2mcb_oP7VzSE"
+        ]
+      },
+      "createdAt": "2026-11-27T04:47:30.204Z"
+    },
+    {
+      "_id": "aud_mwyi2mce_lMmrTCtZ",
+      "workspaceId": "ws_acme_growth",
+      "actorUserId": "usr_customer_01",
+      "actorEmail": "alex@acmestudio.io",
+      "actorRole": "user",
+      "action": "publishing.target_reconciled",
+      "targetType": "delivery_target",
+      "targetId": "del_mwyi2mcb_oP7VzSE",
+      "metadata": {
+        "provider": "x"
+      },
+      "createdAt": "2026-11-27T04:47:30.206Z"
+    }
+  ],
+  "rate_limits": [
+    {
+      "key": "contact_127.0.0.1",
+      "_id": "rl_contact_127.0.0.1",
+      "count": 2,
+      "expiresAt": "2026-11-27T04:48:30.150Z"
+    },
+    {
+      "key": "chat_lead_anon",
+      "_id": "rl_chat_lead_anon",
+      "count": 1,
+      "expiresAt": "2026-11-27T04:48:30.168Z"
+    },
+    {
+      "key": "chat_req_anon",
+      "_id": "rl_chat_req_anon",
+      "count": 2,
+      "expiresAt": "2026-11-27T04:48:30.169Z"
+    }
+  ]
+}

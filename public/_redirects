@@ -1,0 +1,8 @@
+/home              /                     301
+/privacy           /privacy-policy       301
+/terms             /terms-conditions     301
+/pricing           /pricing/index.html   200
+/privacy-policy    /privacy-policy/index.html   200
+/terms-conditions  /terms-conditions/index.html 200
+/contact           /contact/index.html   200
+/*                 /404.html             404
